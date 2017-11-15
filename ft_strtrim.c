@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 18:04:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/11 19:19:29 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/11/15 13:06:10 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,7 @@ char			*ft_strtrim(char const *s)
 	if (findex == ft_strlen(s))
 		return (ft_strnew(0));
 	ret = ft_strsub(s, (unsigned int)findex, (lindex - findex + 1));
+	if (!ret)
+		return (NULL);
 	return (ret);
 }

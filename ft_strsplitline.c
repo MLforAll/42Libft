@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:53:54 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/12 22:55:18 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/11/15 13:12:22 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@ static int		word_cnt(char const *s, char c)
 	while (s[++i])
 		ret += (s[i] == c);
 	return (ret + 1);
+}
+
+static void		*freeretnull(char ***tab)
+{
+	ft_tabfree(tab);
+	return (NULL);
 }
 
 char			**ft_strsplitline(char const *s)
@@ -42,6 +48,8 @@ char			**ft_strsplitline(char const *s)
 		while (s[p] && s[p] != '\n')
 			p++;
 		ret[++r] = ft_strsub(s, i, (size_t)(p - i));
+		if (!ret)
+			return (freeretnull(&ret));
 		if (!s[i])
 			break ;
 		i = p + 1;
