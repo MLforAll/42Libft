@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 17:50:21 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/10 18:49:52 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/11/15 14:56:16 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	int		i;
-	char	*ret;
+	unsigned int	i;
+	char			*ret;
 
-	i = -1;
-	if (!s)
+	i = 0;
+	if (!s || !(ret = ft_strnew((size_t)ft_strlen((char*)s))))
 		return (NULL);
-	ret = ft_strnew((size_t)ft_strlen((char*)s));
-	if (!ret)
-		return (NULL);
-	while (s[++i])
+	while (s[i])
+	{
 		ret[i] = f(s[i]);
+		i++;
+	}
 	return (ret);
 }

@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 17:37:30 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/13 19:32:46 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/11/15 15:02:33 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ char	*ft_strnew(size_t size)
 	char	*ret;
 
 	i = 0;
-	ret = (char*)malloc(sizeof(char) * (size + 1));
-	if (!ret)
+	if (!(ret = (char*)malloc(sizeof(char) * (size + 1))))
 		return (NULL);
 	while (i <= size)
 		ret[i++] = '\0';

@@ -6,18 +6,18 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 18:04:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/15 13:06:10 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/11/15 14:59:48 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	is_whitechar(char c)
+static int				is_whitechar(char c)
 {
 	return ((c == ' ' || c == '\t' || c == '\n'));
 }
 
-static size_t	first_last_index(int first, const char *str)
+static unsigned int		first_last_index(int first, const char *str)
 {
 	int		i;
 
@@ -27,20 +27,19 @@ static size_t	first_last_index(int first, const char *str)
 	return (i);
 }
 
-char			*ft_strtrim(char const *s)
+char					*ft_strtrim(char const *s)
 {
-	char	*ret;
-	size_t	findex;
-	size_t	lindex;
+	char			*ret;
+	unsigned int	findex;
+	unsigned int	lindex;
 
 	if (!s)
 		return (NULL);
 	findex = first_last_index(1, s);
 	lindex = first_last_index(0, s);
-	if (findex == ft_strlen(s))
+	if (findex >= lindex)
 		return (ft_strnew(0));
-	ret = ft_strsub(s, (unsigned int)findex, (lindex - findex + 1));
-	if (!ret)
+	if (!(ret = ft_strsub(s, findex, (size_t)(lindex - findex + 1))))
 		return (NULL);
 	return (ret);
 }
