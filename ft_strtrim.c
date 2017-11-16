@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 18:04:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/16 11:26:08 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/11/16 18:25:19 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ static unsigned int		first_last_index(int first, const char *str)
 {
 	unsigned int	i;
 
-	i = (first) ? 0 : ft_strlen((char*)str) - 1;
+	i = (first) ? 0 : ft_strlen((char*)str);
+	i -= (!first && i > 0);
 	while (is_whitechar(str[i]) && (i > 0 || first))
 		i += (first) ? 1 : -1;
 	return (i);

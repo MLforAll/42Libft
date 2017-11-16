@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 13:52:51 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/08 18:35:21 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/11/16 18:18:15 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 
 int		main(int ac, char **av)
 {
+	/*char	destm[20] = "01234567890123456789";
+	char	desto[20] = "01234567890123456789";*/
 	char	destm[20] = "some text";
 	char	desto[20] = "some text";
 
