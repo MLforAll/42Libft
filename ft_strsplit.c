@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:53:54 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/15 13:12:31 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/11/16 13:23:01 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char			**ft_strsplit(char const *s, char c)
 		return (NULL);
 	i = -1;
 	p = 0;
-	r = -1;
+	r = 0;
 	while (s[++i] && s[p])
 	{
 		while (s[i] == c)
@@ -58,10 +58,10 @@ char			**ft_strsplit(char const *s, char c)
 		p = i + 1;
 		while (s[p] && s[p] != c)
 			p++;
-		if (!(ret[++r] = ft_strsub(s, i, (size_t)(p - i))))
+		if (!(ret[r++] = ft_strsub(s, i, (size_t)(p - i))))
 			return (freeretnull(&ret));
 		i = p;
 	}
-	ret[++r] = NULL;
+	ret[r++] = NULL;
 	return (ret);
 }
