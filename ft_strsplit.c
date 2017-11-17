@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:53:54 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/16 13:23:01 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/11/17 15:25:53 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,16 @@ char			**ft_strsplit(char const *s, char c)
 
 	if (!s || !(ret = (char**)malloc(sizeof(char*) * (word_cnt(s, c) + 1))))
 		return (NULL);
-	i = -1;
+	i = 0;
 	p = 0;
 	r = 0;
-	while (s[++i] && s[p])
+	while (s[i] && s[p])
 	{
 		while (s[i] == c)
 			i++;
 		if (!s[i])
 			break ;
-		p = i + 1;
+		p = (!s[i]) ? i : i + 1;
 		while (s[p] && s[p] != c)
 			p++;
 		if (!(ret[r++] = ft_strsub(s, i, (size_t)(p - i))))
