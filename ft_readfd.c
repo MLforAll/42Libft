@@ -6,11 +6,13 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 13:25:44 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/12 14:05:50 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/11/20 14:27:49 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+#include <unistd.h>
 
 char	*ft_readfd(int fd, size_t buff_size)
 {

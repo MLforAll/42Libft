@@ -6,16 +6,14 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/13 16:09:46 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/11/20 14:23:56 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
 # include <string.h>
-# include <unistd.h>
 
 # define BLACKCLR	"\033[30m"
 # define WHITECLR	"\033[37m"

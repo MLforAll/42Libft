@@ -6,11 +6,12 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 21:51:11 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/17 19:41:59 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/11/20 14:27:22 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char		**ft_tabcat(const char **tab1, const char **tab2)
 {

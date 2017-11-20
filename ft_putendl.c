@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 18:36:45 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/13 15:07:15 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/11/20 14:26:42 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 void	ft_putendl(char const *s)
 {
-	write(1, s, ft_strlen(s));
-	ft_putchar('\n');
+	ft_putendl_fd(s, 1);
 }

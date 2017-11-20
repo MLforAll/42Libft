@@ -6,11 +6,12 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:53:54 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/15 13:12:22 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/11/20 14:27:16 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int		word_cnt(char const *s, char c)
 {

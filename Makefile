@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/11/14 17:54:55 by kdumarai          #+#    #+#              #
-#    Updated: 2017/11/14 17:54:55 by kdumarai         ###   ########.fr        #
+#    Created: 2017/11/18 15:34:20 by kdumarai          #+#    #+#              #
+#    Updated: 2017/11/18 15:34:20 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-GFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 
 SRCS = ft_atoi.c \
 	ft_bzero.c \
@@ -91,11 +91,11 @@ OBJS = $(SRCS:%.c=%.o)
 all: $(NAME)
 
 $(NAME): $(SRCS) libft.h
-	gcc $(GFLAGS) -c $(SRCS)
+	gcc $(CFLAGS) -c $(SRCS)
 	ar rcs $(NAME) $(OBJS)
 
 clean:
-	rm -rf $(OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
