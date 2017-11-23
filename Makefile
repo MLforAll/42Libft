@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/11/18 15:34:20 by kdumarai          #+#    #+#              #
-#    Updated: 2017/11/18 15:34:20 by kdumarai         ###   ########.fr        #
+#    Created: 2017/11/23 19:18:09 by kdumarai          #+#    #+#              #
+#    Updated: 2017/11/23 19:18:09 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,9 +90,11 @@ OBJS = $(SRCS:%.c=%.o)
 
 all: $(NAME)
 
-$(NAME): $(SRCS) libft.h
-	gcc $(CFLAGS) -c $(SRCS)
+$(NAME): $(OBJS) libft.h
 	ar rcs $(NAME) $(OBJS)
+
+%.o: %.c
+	gcc $(CFLAGS) -c $<
 
 clean:
 	rm -f $(OBJS)
