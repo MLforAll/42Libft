@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testreadstdin.c                                    :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/12 14:07:18 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/13 15:44:52 by kdumarai         ###   ########.fr       */
+/*   Created: 2017/11/06 19:12:32 by kdumarai          #+#    #+#             */
+/*   Updated: 2017/11/13 15:06:58 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int		main(int ac, char **av)
+int		ft_isdigit(int c)
 {
-	char	**splittedinput;
-
-	if (ac < 3)
-		return (ft_returnmsg("You need to specify a str and delimiter for strsplit!", 2, 1));
-	splittedinput = ft_strsplit(av[1], av[2][0]);
-	printf("len = %li\n", ft_tablen((const char **)splittedinput));
-	ft_tabfree(&splittedinput);
-	return (0);
+	return ((c >= '0' && c <= '9'));
 }
