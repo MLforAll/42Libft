@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/20 14:23:56 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/11/27 19:31:15 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 
 # include <string.h>
 
-# define BLACKCLR	"\033[30m"
-# define WHITECLR	"\033[37m"
-# define REDCLR		"\033[31m"
-# define BLUECLR	"\033[34m"
-# define GREENCLR	"\033[32m"
-# define DEFAULTCLR	"\033[39m"
+# define BLACKCLR	"\033[0;30m"
+# define WHITECLR	"\033[0;37m"
+# define REDCLR		"\033[0;31m"
+# define BLUECLR	"\033[0;34m"
+# define CYANCLR	"\033[0;36m"
+# define GREENCLR	"\033[0;32m"
+# define DEFAULTCLR	"\033[0;39m"
 
 typedef struct		s_list
 {
