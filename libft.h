@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/27 19:31:15 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/11/29 17:21:20 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@
 
 # define BLACKCLR	"\033[0;30m"
 # define WHITECLR	"\033[0;37m"
+# define YELLOWCLR	"\033[0;33m"
 # define REDCLR		"\033[0;31m"
+# define PURPLECLR	"\033[0;35m"
 # define BLUECLR	"\033[0;34m"
 # define CYANCLR	"\033[0;36m"
 # define GREENCLR	"\033[0;32m"
