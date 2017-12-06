@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/23 19:18:09 by kdumarai          #+#    #+#              #
-#    Updated: 2017/11/23 19:18:09 by kdumarai         ###   ########.fr        #
+#    Updated: 2017/12/06 13:37:02 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,7 +84,8 @@ SRCS = ft_atoi.c \
 	ft_tablen.c \
 	ft_tabsort.c \
 	ft_tolower.c \
-	ft_toupper.c
+	ft_toupper.c \
+	ft_isupper.c
 
 OBJS = $(SRCS:%.c=%.o)
 

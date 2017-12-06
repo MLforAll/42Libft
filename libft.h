@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/29 17:21:20 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/12/06 13:34:54 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,5 +107,6 @@ char				**ft_strsplitline(char const *s);
 size_t				ft_tablen(const char **tab);
 char				**ft_tabcat(const char **tab1, const char **tab2);
 void				ft_tabsort(char **tab);
+int					ft_isupper(int c);
 
 #endif
