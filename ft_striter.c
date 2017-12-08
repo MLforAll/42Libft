@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 17:45:29 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/15 14:56:43 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/12/08 16:42:04 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	unsigned int	i;
+	int		i;
 
 	i = 0;
 	if (!s || !f)

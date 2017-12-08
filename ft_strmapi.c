@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 17:50:21 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/15 14:55:34 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/12/08 16:45:02 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*ret;
 
 	i = 0;
-	if (!s || !(ret = ft_strnew((size_t)ft_strlen((char*)s))))
+	if (!s || !(ret = ft_strnew(ft_strlen(s))))
 		return (NULL);
 	while (s[i])
 	{

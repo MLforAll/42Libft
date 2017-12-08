@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 18:47:47 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/11 15:48:11 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/12/08 16:50:10 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,5 @@
 
 void	ft_putnbr(int n)
 {
-	if (n == -2147483648)
-	{
-		ft_putstr("-2147483648");
-		return ;
-	}
-	if (n < 0)
-	{
-		n = -n;
-		ft_putchar('-');
-	}
-	if (n > 9)
-		ft_putnbr(n / 10);
-	ft_putchar(n % 10 + '0');
+	ft_putnbr_fd(n, 1);
 }

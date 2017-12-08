@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/11/23 19:18:09 by kdumarai          #+#    #+#              #
-#    Updated: 2017/12/06 13:37:02 by kdumarai         ###   ########.fr        #
+#    Created: 2017/12/08 17:21:38 by kdumarai          #+#    #+#              #
+#    Updated: 2017/12/08 17:28:08 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,9 @@ SRCS = ft_atoi.c \
 	ft_isalpha.c \
 	ft_isascii.c \
 	ft_isdigit.c \
+	ft_islower.c \
 	ft_isprint.c \
+	ft_isupper.c \
 	ft_itoa.c \
 	ft_lstadd.c \
 	ft_lstdel.c \
@@ -84,8 +86,7 @@ SRCS = ft_atoi.c \
 	ft_tablen.c \
 	ft_tabsort.c \
 	ft_tolower.c \
-	ft_toupper.c \
-	ft_isupper.c
+	ft_toupper.c
 
 OBJS = $(SRCS:%.c=%.o)
 
@@ -104,3 +105,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re
