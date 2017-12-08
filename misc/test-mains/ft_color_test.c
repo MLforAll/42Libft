@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   testclr.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 18:35:01 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/12/08 21:30:58 by kdumarai         ###   ########.fr       */
+/*   Created: 2017/11/12 15:19:35 by kdumarai          #+#    #+#             */
+/*   Updated: 2017/11/13 12:40:34 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+int		main(void)
 {
-	ft_putchar_fd(c, 1);
+	ft_putendl("This is a msg");
+	ft_putendl_color("Now in red", REDCLR);
+	ft_putendl_color("Now in blue", BLUECLR);
+	ft_putendl_color("Now in green", GREENCLR);
+	ft_putstr_color("What about ", BLUECLR);
+	ft_putendl_color("a mixed color message?", GREENCLR);
+	ft_putstr(DEFAULTCLR);
+	ft_putendl("And back to normal");
+	return (0);
 }

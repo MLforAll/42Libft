@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   strstr_test.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 18:35:01 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/12/08 21:30:58 by kdumarai         ###   ########.fr       */
+/*   Created: 2017/11/07 13:52:51 by kdumarai          #+#    #+#             */
+/*   Updated: 2017/11/10 20:05:34 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-void	ft_putchar(char c)
+int		main(int ac, char **av)
 {
-	ft_putchar_fd(c, 1);
+	char	**ret;
+	int		i;
+
+	i = -1;
+	if (ac < 3)
+		return (1);
+	ret = ft_strsplit(av[1], av[2][0]);
+	while (ret[++i])
+		printf("ret[%i] = %s\n", i, ret[i]);
+	while (*ret)
+	{
+		free(*ret);
+		*ret = NULL;
+		ret++;
+	}
+	ret = NULL;
+	return (0);
 }

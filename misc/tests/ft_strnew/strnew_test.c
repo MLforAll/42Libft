@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   strstr_test.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 18:35:01 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/12/08 21:30:58 by kdumarai         ###   ########.fr       */
+/*   Created: 2017/11/07 13:52:51 by kdumarai          #+#    #+#             */
+/*   Updated: 2017/11/13 19:14:13 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-void	ft_putchar(char c)
+int		main(int ac, char **av)
 {
-	ft_putchar_fd(c, 1);
+	char	*str;
+
+	str = NULL;
+	if (ac < 2)
+		return (1);
+	str = ft_strnew(atoi(av[1]));
+	if (str)
+	{
+		printf("SUCCESS\n");
+		ft_strdel(&str);
+	}
+	return (0);
 }

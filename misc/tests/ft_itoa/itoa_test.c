@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   atoi_test.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 18:35:01 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/12/08 21:30:58 by kdumarai         ###   ########.fr       */
+/*   Created: 2017/11/07 16:32:16 by kdumarai          #+#    #+#             */
+/*   Updated: 2017/11/08 14:55:43 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-void	ft_putchar(char c)
+int		main(int ac, char **av)
 {
-	ft_putchar_fd(c, 1);
+	if (ac < 2)
+		return (1);
+	printf("%s\n", ft_itoa(atoi(av[1])));
+	return (0);
 }
