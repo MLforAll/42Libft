@@ -6,11 +6,12 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 13:52:51 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/16 18:35:47 by kdumarai         ###   ########.fr       */
+/*   Updated: 2017/12/09 16:40:35 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "libft.h"
 
