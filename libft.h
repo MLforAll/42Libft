@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/12/08 17:52:31 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/01/04 06:14:20 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,9 +105,12 @@ void				ft_putendl_color(char const *s, char const *ec);
 void				ft_putendl_color_fd(char const *s, char const *ec, int fd);
 char				**ft_strsplitline(char const *s);
 size_t				ft_tablen(const char **tab);
-char				**ft_tabcat(const char **tab1, const char **tab2);
+char				**ft_tabjoin(const char **tab1, const char **tab2);
 void				ft_tabsort(char **tab);
 int					ft_isupper(int c);
 int					ft_islower(int c);
+size_t				ft_nbrlen_base(long long n, int base);
+size_t				ft_nbrlen(long long n);
+void				ft_lstsort(t_list **lst, int (*cmp)(t_list*, t_list*));
 
 #endif

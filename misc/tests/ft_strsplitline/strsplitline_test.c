@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabcat.c                                        :+:      :+:    :+:   */
+/*   strsplitline_test.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/11 21:51:11 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/20 14:27:22 by kdumarai         ###   ########.fr       */
+/*   Created: 2017/11/07 13:52:51 by kdumarai          #+#    #+#             */
+/*   Updated: 2017/11/12 22:13:09 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
-#include <stdlib.h>
 
-char		**ft_tabcat(const char **tab1, const char **tab2)
+int		main(void)
 {
-	size_t	len1;
-	size_t	len2;
 	char	**ret;
-	char	**brw;
+	char	*s1;
+	char	*s2;
 
-	if (!tab1 || !tab2)
-		return (NULL);
-	len1 = ft_tablen(tab1);
-	len2 = ft_tablen(tab2);
-	if (!(brw = (char**)malloc(sizeof(char*) * (len1 + len2 + 1))))
-		return (NULL);
-	ret = brw;
-	while (*tab1)
-		*(brw++) = ft_strdup(*(tab1++));
-	while (*tab2)
-		*(brw++) = ft_strdup(*(tab2++));
-	*brw = NULL;
-	return (ret);
+	s1 = "Je fais un test\navec mon deuxieme split\n\nIl doit\n\n\nfctionner\n";
+	s2 = "Un test\n\n\n\navec\n\n\nplein\nde\nblancs";
+
+	ft_putendl_color("First test", REDCLR);
+	ret = ft_strsplitline(s1);
+	ft_tabprint(ret, "ret1");
+	ft_tabfree(&ret);
+
+	ft_putendl_color("Second test", REDCLR);
+	ret = ft_strsplitline(s2);
+	ft_tabprint(ret, "ret2");
+	ft_tabfree(&ret);
+
+	return (0);
 }
