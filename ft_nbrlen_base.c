@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabcat.c                                        :+:      :+:    :+:   */
+/*   ft_nbrlen_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/11 21:51:11 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/20 14:27:22 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/01/03 23:35:56 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/01/04 00:56:08 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char		**ft_tabcat(const char **tab1, const char **tab2)
+size_t		ft_nbrlen_base(long long nbr, int base)
 {
-	size_t	len1;
-	size_t	len2;
-	char	**ret;
-	char	**brw;
+	size_t		ret;
 
-	if (!tab1 || !tab2)
-		return (NULL);
-	len1 = ft_tablen(tab1);
-	len2 = ft_tablen(tab2);
-	if (!(brw = (char**)malloc(sizeof(char*) * (len1 + len2 + 1))))
-		return (NULL);
-	ret = brw;
-	while (*tab1)
-		*(brw++) = ft_strdup(*(tab1++));
-	while (*tab2)
-		*(brw++) = ft_strdup(*(tab2++));
-	*brw = NULL;
+	ret = 1;
+	nbr = (nbr < 0) ? -nbr : nbr;
+	while (nbr >= base)
+	{
+		nbr /= base;
+		ret++;
+	}
 	return (ret);
 }

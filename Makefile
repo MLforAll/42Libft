@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/12/08 17:21:38 by kdumarai          #+#    #+#              #
-#    Updated: 2017/12/08 17:28:08 by kdumarai         ###   ########.fr        #
+#    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
+#    Updated: 2018/01/04 06:10:18 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRCS = ft_atoi.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
 	ft_lstnew.c \
+	ft_lstsort.c \
 	ft_memalloc.c \
 	ft_memccpy.c \
 	ft_memchr.c \
@@ -38,6 +39,8 @@ SRCS = ft_atoi.c \
 	ft_memdel.c \
 	ft_memmove.c \
 	ft_memset.c \
+	ft_nbrlen.c \
+	ft_nbrlen_base.c \
 	ft_putchar.c \
 	ft_putchar_fd.c \
 	ft_putendl.c \
@@ -81,8 +84,8 @@ SRCS = ft_atoi.c \
 	ft_strstr.c \
 	ft_strsub.c \
 	ft_strtrim.c \
-	ft_tabcat.c \
 	ft_tabfree.c \
+	ft_tabjoin.c \
 	ft_tablen.c \
 	ft_tabsort.c \
 	ft_tolower.c \
@@ -92,8 +95,8 @@ OBJS = $(SRCS:%.c=%.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) libft.h
-	ar rcs $(NAME) $(OBJS)
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $?
 
 %.o: %.c
 	gcc $(CFLAGS) -c $<
