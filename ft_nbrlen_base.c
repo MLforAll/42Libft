@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 23:35:56 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/04 00:56:08 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/01/05 13:52:14 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t		ft_nbrlen_base(long long nbr, int base)
 
 	ret = 1;
 	nbr = (nbr < 0) ? -nbr : nbr;
+	if (nbr < base)
+		return (1);
 	while (nbr >= base)
 	{
 		nbr /= base;

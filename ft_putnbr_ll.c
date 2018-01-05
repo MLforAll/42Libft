@@ -1,42 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsort.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_ll.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/04 06:07:34 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/05 12:28:54 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/01/05 13:33:40 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/01/05 13:34:59 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstsort(t_list **lst, int (*cmp)(t_list*, t_list*))
+void	ft_putnbr_ll(long long n)
 {
-	t_list	*curr;
-	t_list	*prev;
-	t_list	*tmp;
-
-	curr = *lst;
-	while (curr->next)
+	if (n < 0)
 	{
-		prev = (curr == *lst) ? NULL : prev;
-		if (cmp(curr, curr->next))
-		{
-			if (prev)
-				prev->next = curr->next;
-			else
-				*lst = curr->next;
-			tmp = curr->next->next;
-			curr->next->next = curr;
-			curr->next = tmp;
-			curr = *lst;
-		}
-		else
-		{
-			prev = curr;
-			curr = curr->next;
-		}
+		n = -n;
+		ft_putchar('-');
 	}
+	if (n > 9)
+		ft_putnbr(n / 10);
+	ft_putchar(n % 10 + '0');
 }
