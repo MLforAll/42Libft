@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/08 00:54:03 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/01/09 18:47:13 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,5 +114,6 @@ size_t			ft_nbrlen(long long n);
 void			ft_lstsort(t_list **lst, int (*cmp)(t_list*, t_list*));
 void			ft_putnbr_ll_fd(long long n, int fd);
 void			ft_putnbr_ll(long long n);
+int				ft_strstart(char *s, char *check);
 
 #endif
