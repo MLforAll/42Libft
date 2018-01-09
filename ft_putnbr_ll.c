@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 13:33:40 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/08 00:53:10 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/01/09 17:22:56 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putnbr_ll(long long n)
 {
-	ft_putnbr_ll_fd(1, n);
+	ft_putnbr_ll_fd(n, 1);
 }
