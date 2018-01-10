@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/09 18:45:41 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/09 18:46:46 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/01/10 17:15:53 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_strstart(char *s, char *check)
 {
-	while (*s)
+	while (*check)
 	{
 		if (*(s++) != *(check++))
 			return (0);
