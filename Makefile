@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/01/09 18:47:28 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/01/12 16:59:46 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,7 +92,8 @@ SRCS = ft_atoi.c \
 	ft_toupper.c \
 	ft_putnbr_ll.c \
 	ft_putnbr_ll_fd.c \
-	ft_strstart.c
+	ft_strstart.c \
+	ft_isatty.c
 
 OBJS = $(SRCS:%.c=%.o)
 
