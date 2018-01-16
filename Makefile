@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/01/12 16:59:46 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/01/16 19:49:05 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,23 +93,29 @@ SRCS = ft_atoi.c \
 	ft_putnbr_ll.c \
 	ft_putnbr_ll_fd.c \
 	ft_strstart.c \
-	ft_isatty.c
+	ft_isatty.c \
+	ft_ltoa.c
 
 OBJS = $(SRCS:%.c=%.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $?
+	@printf "\r\033[KCompiling\nLinking\n"
+	@ar rcs $(NAME) $?
+	@printf "\033[1;32mLib built at $(NAME)\033[0;39m\n"
 
 %.o: %.c
-	gcc $(CFLAGS) -c $<
+	@printf "\033[KCompiling \033[1;33m$<\033[0;39m\r"
+	@gcc $(CFLAGS) -c $<
 
 clean:
-	rm -f $(OBJS)
+	@printf "Removing objects\n"
+	@rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	@printf "Removing $(NAME)\n"
+	@rm -f $(NAME)
 
 re: fclean all
 

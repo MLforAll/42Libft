@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/12 17:23:40 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/01/16 20:12:32 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,33 @@
 
 # include <string.h>
 
-# define BLACKCLR	"\033[0;30m"
-# define WHITECLR	"\033[0;37m"
-# define YELLOWCLR	"\033[0;33m"
-# define REDCLR		"\033[0;31m"
-# define PURPLECLR	"\033[0;35m"
-# define BLUECLR	"\033[0;34m"
-# define CYANCLR	"\033[0;36m"
-# define GREENCLR	"\033[0;32m"
-# define DEFAULTCLR	"\033[0;39m"
+/*
+** Colors
+*/
+
+# define BLACKCLR			"\033[0;30m"
+# define REDCLR				"\033[0;31m"
+# define GREENCLR			"\033[0;32m"
+# define YELLOWCLR			"\033[0;33m"
+# define BLUECLR			"\033[0;34m"
+# define PURPLECLR			"\033[0;35m"
+# define CYANCLR			"\033[0;36m"
+# define WHITECLR			"\033[0;37m"
+# define DEFAULTCLR			"\033[0;39m"
+
+# define LIGHTBLACKCLR		"\033[0;30m"
+# define LIGHTREDCLR		"\033[0;31m"
+# define LIGHTGREENCLR		"\033[0;32m"
+# define LIGHTYELLOWCLR		"\033[0;33m"
+# define LIGHTBLUECLR		"\033[0;34m"
+# define LIGHTPURPLECLR		"\033[0;35m"
+# define LIGHTCYANCLR		"\033[0;36m"
+# define LIGHTWHITECLR		"\033[0;37m"
+# define LIGHTDEFAULTCLR	"\033[0;39m"
+
+/*
+** t_list def
+*/
 
 typedef struct	s_list
 {
@@ -31,6 +49,10 @@ typedef struct	s_list
 	size_t			content_size;
 	struct s_list	*next;
 }				t_list;
+
+/*
+** libc funcs
+*/
 
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
@@ -61,6 +83,10 @@ int				ft_isprint(int c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 
+/*
+** Custom ft funcs
+*/
+
 void			*ft_memalloc(size_t size);
 void			ft_memdel(void **ap);
 char			*ft_strnew(size_t size);
@@ -86,6 +112,10 @@ void			ft_putstr_fd(char const *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putendl_fd(char const *s, int fd);
 
+/*
+** t_list functions
+*/
+
 t_list			*ft_lstnew(void const *content, size_t content_size);
 void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
@@ -93,28 +123,46 @@ void			ft_lstadd(t_list **alst, t_list *newchain);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
+/*
+** Bonus (libc)
+*/
+
+int				ft_isupper(int c);
+int				ft_islower(int c);
+
+/*
+** Bonus (t_list)
+*/
+
 void			ft_putlst(t_list *lst);
-void			ft_tabfree(char ***tab);
+void			ft_lstsort(t_list **lst, int (*cmp)(t_list*, t_list*));
+
+/*
+** Bonus
+*/
+
 void			ft_puttab(char **tab, char *tabname);
+size_t			ft_tablen(const char **tab);
 void			ft_tabsort(char **tab);
+char			**ft_tabjoin(const char **tab1, const char **tab2);
+void			ft_tabfree(char ***tab);
+
 char			*ft_readfd(int fd, size_t buff_size);
 int				ft_returnmsg(char *msg, int fd, int retval);
+
+char			**ft_strsplitline(char const *s);
+char			*ft_strstart(char *s, char *check);
 void			ft_putstr_color(char const *s, char const *ec);
 void			ft_putstr_color_fd(char const *s, char const *ec, int fd);
 void			ft_putendl_color(char const *s, char const *ec);
 void			ft_putendl_color_fd(char const *s, char const *ec, int fd);
-char			**ft_strsplitline(char const *s);
-size_t			ft_tablen(const char **tab);
-char			**ft_tabjoin(const char **tab1, const char **tab2);
-void			ft_tabsort(char **tab);
-int				ft_isupper(int c);
-int				ft_islower(int c);
+
 size_t			ft_nbrlen_base(long long n, int base);
 size_t			ft_nbrlen(long long n);
-void			ft_lstsort(t_list **lst, int (*cmp)(t_list*, t_list*));
 void			ft_putnbr_ll_fd(long long n, int fd);
 void			ft_putnbr_ll(long long n);
-char			*ft_strstart(char *s, char *check);
+char			*ft_lltoa(long nl);
+
 int				ft_isatty(int fildes);
 
 #endif
