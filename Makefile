@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/01/16 19:49:05 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/01/16 20:15:27 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,7 +94,7 @@ SRCS = ft_atoi.c \
 	ft_putnbr_ll_fd.c \
 	ft_strstart.c \
 	ft_isatty.c \
-	ft_ltoa.c
+	ft_lltoa.c
 
 OBJS = $(SRCS:%.c=%.o)
 
@@ -110,12 +110,12 @@ $(NAME): $(OBJS)
 	@gcc $(CFLAGS) -c $<
 
 clean:
-	@printf "Removing objects\n"
 	@rm -f $(OBJS)
+	@printf "Removed libft's objects\n"
 
 fclean: clean
-	@printf "Removing $(NAME)\n"
 	@rm -f $(NAME)
+	@printf "Removed $(NAME)\n"
 
 re: fclean all
 
