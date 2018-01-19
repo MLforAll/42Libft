@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/16 20:15:50 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/01/18 22:52:36 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,16 @@
 # define LIGHTCYANCLR		"\033[0;36m"
 # define LIGHTWHITECLR		"\033[0;37m"
 # define LIGHTDEFAULTCLR	"\033[0;39m"
+
+/*
+** size struct (width/height)
+*/
+
+typedef struct	s_size
+{
+	size_t			width;
+	size_t			height;
+}				t_size;
 
 /*
 ** t_list def
@@ -135,7 +145,9 @@ int				ft_islower(int c);
 */
 
 void			ft_putlst(t_list *lst);
-void			ft_lstsort(t_list **lst, int (*cmp)(t_list*, t_list*));
+void			ft_lstbubblesort(t_list **lst, int (*cmp)(t_list*, t_list*));
+void			ft_lstmergesort(t_list **lst, int (*cmp)(t_list*, t_list*));
+void			ft_lstinssort(t_list **alst, int (*cmp)(t_list *a, t_list *b));
 
 /*
 ** Bonus

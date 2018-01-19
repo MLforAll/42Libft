@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/01/16 20:15:27 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/01/18 22:52:13 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,9 @@ SRCS = ft_atoi.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
 	ft_lstnew.c \
-	ft_lstsort.c \
+	ft_lstbubblesort.c \
+	ft_lstmergesort.c \
+	ft_lstinssort.c \
 	ft_memalloc.c \
 	ft_memccpy.c \
 	ft_memchr.c \
@@ -98,24 +100,27 @@ SRCS = ft_atoi.c \
 
 OBJS = $(SRCS:%.c=%.o)
 
+PROJTEXT = \033[1;34mlibft: \033[0;39m
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@printf "\r\033[KCompiling\nLinking\n"
-	@ar rcs $(NAME) $?
-	@printf "\033[1;32mLib built at $(NAME)\033[0;39m\n"
+	@ printf "\r\033[K$(PROJTEXT)Compiling\n"
+	@ printf "$(PROJTEXT)Linking\n"
+	@ ar rcs $(NAME) $?
+	@ printf "$(PROJTEXT)\033[1;32mLib built at $(NAME)\033[0;39m\n"
 
 %.o: %.c
-	@printf "\033[KCompiling \033[1;33m$<\033[0;39m\r"
-	@gcc $(CFLAGS) -c $<
+	@ printf "\033[K$(PROJTEXT)Compiling \033[1;33m$<\033[0;39m\r"
+	@ gcc $(CFLAGS) -c $<
 
 clean:
-	@rm -f $(OBJS)
-	@printf "Removed libft's objects\n"
+	@ rm -f $(OBJS)
+	@ printf "$(PROJTEXT)Removed objects\n"
 
 fclean: clean
-	@rm -f $(NAME)
-	@printf "Removed $(NAME)\n"
+	@ rm -f $(NAME)
+	@ printf "$(PROJTEXT)Removed $(NAME)\n"
 
 re: fclean all
 

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsort.c                                       :+:      :+:    :+:   */
+/*   ft_lstbubblesort.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/04 06:07:34 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/05 12:28:54 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/01/18 22:25:45 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstsort(t_list **lst, int (*cmp)(t_list*, t_list*))
+void	ft_lstbubblesort(t_list **lst, int (*cmp)(t_list*, t_list*))
 {
 	t_list	*curr;
 	t_list	*prev;
