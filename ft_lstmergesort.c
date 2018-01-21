@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/15 20:30:02 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/18 22:31:41 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/01/20 19:18:16 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ static void		split_lst(t_list *lst, t_list **side_a, t_list **side_b)
 	middle->next = NULL;
 }
 
-static t_list	*merge_lists(t_list *a, t_list *b, int (*cmp)(t_list*, t_list*))
+static t_list	*merge_lists(t_list *a, t_list *b, \
+	int (*f)(t_list*, t_list*, int), int rev)
 {
 	t_list	*ret;
 
@@ -59,20 +60,21 @@ static t_list	*merge_lists(t_list *a, t_list *b, int (*cmp)(t_list*, t_list*))
 		return (b);
 	else if (!b)
 		return (a);
-	if (!cmp(a, b))
+	if (!f(a, b, rev))
 	{
 		ret = a;
-		ret->next = merge_lists(a->next, b, cmp);
+		ret->next = merge_lists(a->next, b, f, rev);
 	}
 	else
 	{
 		ret = b;
-		ret->next = merge_lists(a, b->next, cmp);
+		ret->next = merge_lists(a, b->next, f, rev);
 	}
 	return (ret);
 }
 
-void			ft_lstmergesort(t_list **lst, int (*cmp)(t_list*, t_list*))
+void			ft_lstmergesort(t_list **lst, int (*f)(t_list*, t_list*, int), \
+	int rev)
 {
 	t_list	*side_a;
 	t_list	*side_b;
@@ -80,7 +82,7 @@ void			ft_lstmergesort(t_list **lst, int (*cmp)(t_list*, t_list*))
 	if (!*lst || !(*lst)->next)
 		return ;
 	split_lst(*lst, &side_a, &side_b);
-	ft_lstmergesort(&side_a, cmp);
-	ft_lstmergesort(&side_b, cmp);
-	*lst = merge_lists(side_a, side_b, cmp);
+	ft_lstmergesort(&side_a, f, rev);
+	ft_lstmergesort(&side_b, f, rev);
+	*lst = merge_lists(side_a, side_b, f, rev);
 }

@@ -6,18 +6,18 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/18 22:42:28 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/19 01:45:58 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/01/20 19:20:27 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static void	insert_elsewhere(t_list *bw, t_list *curr, \
-	int (*cmp)(t_list *a, t_list *b))
+	int (*f)(t_list *a, t_list *b, int), int rev)
 {
 	while (bw)
 	{
-		if (!bw->next || !cmp(curr, bw->next))
+		if (!bw->next || !f(curr, bw->next, rev))
 		{
 			curr->next = bw->next;
 			bw->next = curr;
@@ -27,7 +27,8 @@ static void	insert_elsewhere(t_list *bw, t_list *curr, \
 	}
 }
 
-void		ft_lstinssort(t_list **alst, int (*cmp)(t_list *a, t_list *b))
+void		ft_lstinssort(t_list **alst, int (*f)(t_list *a, t_list *b, int), \
+	int rev)
 {
 	t_list	*ret;
 	t_list	*curr;
@@ -39,13 +40,13 @@ void		ft_lstinssort(t_list **alst, int (*cmp)(t_list *a, t_list *b))
 	{
 		curr = *alst;
 		*alst = (*alst)->next;
-		if (!ret || !cmp(curr, ret))
+		if (!ret || !f(curr, ret, rev))
 		{
 			curr->next = ret;
 			ret = curr;
 		}
 		else
-			insert_elsewhere(ret, curr, cmp);
+			insert_elsewhere(ret, curr, f, rev);
 	}
 	*alst = ret;
 }

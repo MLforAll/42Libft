@@ -6,13 +6,14 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/04 06:07:34 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/18 22:25:45 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/01/20 19:16:35 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstbubblesort(t_list **lst, int (*cmp)(t_list*, t_list*))
+void	ft_lstbubblesort(t_list **lst, int (*cmp)(t_list*, t_list*, int), \
+	int rev)
 {
 	t_list	*curr;
 	t_list	*prev;
@@ -22,7 +23,7 @@ void	ft_lstbubblesort(t_list **lst, int (*cmp)(t_list*, t_list*))
 	while (curr->next)
 	{
 		prev = (curr == *lst) ? NULL : prev;
-		if (cmp(curr, curr->next))
+		if (cmp(curr, curr->next, rev))
 		{
 			if (prev)
 				prev->next = curr->next;
