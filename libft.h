@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/22 01:11:28 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/01/25 19:24:51 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,6 +160,7 @@ void			ft_puttab(char **tab, char *tabname);
 size_t			ft_tablen(const char **tab);
 void			ft_tabsort(char **tab);
 char			**ft_tabjoin(const char **tab1, const char **tab2);
+char			**ft_tabdup(const char **src);
 void			ft_tabfree(char ***tab);
 
 char			*ft_readfd(int fd, size_t buff_size);

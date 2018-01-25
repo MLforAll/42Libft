@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/01/22 01:10:51 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/01/25 19:25:02 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,6 +90,7 @@ SRCS = ft_atoi.c \
 	ft_strtrim.c \
 	ft_tabfree.c \
 	ft_tabjoin.c \
+	ft_tabdup.c \
 	ft_tablen.c \
 	ft_tabsort.c \
 	ft_tolower.c \

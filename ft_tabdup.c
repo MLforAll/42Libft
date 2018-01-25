@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_tabdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/06 19:22:07 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/25 18:47:43 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/01/25 19:11:01 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/01/25 21:12:53 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+char	**ft_tabdup(const char **src)
 {
-	size_t	i;
+	char	**ret;
+	char	**bw;
+	char	**bws;
 
-	i = 0;
-	while (src[i])
+	if (!(ret = (char**)malloc(sizeof(char*) * (ft_tablen(src) + 1))))
+		return (NULL);
+	bw = ret;
+	bws = (char**)src;
+	while (*bws)
 	{
-		dst[i] = src[i];
-		i++;
+		if (!(*bw = ft_strdup(*bws)))
+		{
+			ft_tabfree(&ret);
+			return (NULL);
+		}
+		bws++;
+		bw++;
 	}
-	dst[i] = '\0';
-	return (dst);
+	*bw = NULL;
+	return (ret);
 }
