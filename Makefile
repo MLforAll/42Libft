@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/01/25 19:25:02 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/01/27 21:58:39 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,7 @@ SRCS = ft_atoi.c \
 	ft_striteri.c \
 	ft_strjoin.c \
 	ft_strnjoin.c \
+	ft_stradd.c \
 	ft_strlcat.c \
 	ft_strlen.c \
 	ft_strmap.c \
@@ -98,7 +99,8 @@ SRCS = ft_atoi.c \
 	ft_putnbr_ll.c \
 	ft_putnbr_ll_fd.c \
 	ft_strstart.c \
-	ft_isatty.c
+	ft_isatty.c \
+	get_next_line.c \
 
 OBJS = $(SRCS:%.c=%.o)
 
