@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/01/27 21:58:39 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/01/30 01:27:52 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,7 @@ SRCS = ft_atoi.c \
 	ft_putendl_color_fd.c \
 	ft_putendl_fd.c \
 	ft_putlst.c \
+	ft_putlst_fd.c \
 	ft_putnbr.c \
 	ft_putnbr_fd.c \
 	ft_putstr.c \
