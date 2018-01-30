@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/30 01:28:26 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/01/30 20:29:58 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,6 +157,7 @@ void			ft_lstinssort(t_list **alst, \
 ** Bonus
 */
 
+char			**ft_tabnew(void);
 void			ft_puttab(char **tab, char *tabname);
 size_t			ft_tablen(const char **tab);
 void			ft_tabsort(char **tab);
