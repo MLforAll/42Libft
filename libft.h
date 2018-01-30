@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/30 20:29:58 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/01/30 21:50:37 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,6 +168,7 @@ void			ft_tabfree(char ***tab);
 char			*ft_readfd(int fd, size_t buff_size);
 int				ft_returnmsg(char *msg, int fd, int retval);
 
+unsigned int	ft_strcmpi(const char *s1, const char *s2);
 char			*ft_strnjoin(char const *s1, char const *s2, size_t len);
 void			ft_stradd(char **str, char *add);
 char			**ft_strsplitline(char const *s);
