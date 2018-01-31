@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/30 21:50:37 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/01/31 18:18:54 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,12 +146,12 @@ int				ft_islower(int c);
 
 void			ft_putlst(t_list *lst);
 void			ft_putlst_fd(t_list *lst, int fd);
-void			ft_lstbubblesort(t_list **lst, \
-		int (*f)(t_list*, t_list*, int), int rev);
-void			ft_lstmergesort(t_list **lst, \
-		int (*f)(t_list*, t_list*, int), int rev);
-void			ft_lstinssort(t_list **alst, \
-		int (*f)(t_list *a, t_list *b, int), int rev);
+void			ft_lstbubblesort(t_list **lst, int (*f)(t_list*, t_list*), \
+	int rev);
+void			ft_lstmergesort(t_list **lst, int (*f)(t_list*, t_list*), \
+	int rev);
+void			ft_lstinssort(t_list **alst, int (*f)(t_list *a, t_list *b), \
+	int rev);
 
 /*
 ** Bonus

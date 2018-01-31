@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/15 20:30:02 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/20 19:18:16 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/01/31 18:19:24 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static void		split_lst(t_list *lst, t_list **side_a, t_list **side_b)
 }
 
 static t_list	*merge_lists(t_list *a, t_list *b, \
-	int (*f)(t_list*, t_list*, int), int rev)
+	int (*f)(t_list*, t_list*), int rev)
 {
 	t_list	*ret;
 
@@ -60,7 +60,7 @@ static t_list	*merge_lists(t_list *a, t_list *b, \
 		return (b);
 	else if (!b)
 		return (a);
-	if (!f(a, b, rev))
+	if (!(f(a, b) == !rev))
 	{
 		ret = a;
 		ret->next = merge_lists(a->next, b, f, rev);
@@ -73,7 +73,7 @@ static t_list	*merge_lists(t_list *a, t_list *b, \
 	return (ret);
 }
 
-void			ft_lstmergesort(t_list **lst, int (*f)(t_list*, t_list*, int), \
+void			ft_lstmergesort(t_list **lst, int (*f)(t_list*, t_list*), \
 	int rev)
 {
 	t_list	*side_a;
