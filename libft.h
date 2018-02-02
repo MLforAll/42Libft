@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/31 18:18:54 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/02/02 20:00:35 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,15 @@
 # define LIGHTCYANCLR		"\033[0;36m"
 # define LIGHTWHITECLR		"\033[0;37m"
 # define LIGHTDEFAULTCLR	"\033[0;39m"
+
+/*
+** TRUE/YES and FALSE/NO
+*/
+
+# define YES				1
+# define NO					0
+# define TRUE				1
+# define FALSE				0
 
 /*
 ** size struct (width/height)
