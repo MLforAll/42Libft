@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/01/30 21:50:55 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/02/02 21:54:24 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRCS = ft_atoi.c \
 	ft_itoa.c \
 	ft_lltoa.c \
 	ft_lstadd.c \
+	ft_lstpush.c \
 	ft_lstdel.c \
 	ft_lstdelone.c \
 	ft_lstiter.c \
