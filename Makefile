@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/02/02 21:54:24 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/02/03 19:07:17 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -104,7 +104,9 @@ SRCS = ft_atoi.c \
 	ft_putnbr_ll_fd.c \
 	ft_strstart.c \
 	ft_isatty.c \
-	get_next_line.c \
+	get_next_line.c
+NSRC = $(shell echo "$(SRCS)" | awk '{print NF}')
+CSRC = 1
 
 OBJS = $(SRCS:%.c=%.o)
 
@@ -113,13 +115,16 @@ PROJTEXT = \033[1;34mlibft: \033[0;39m
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@ printf "\r\033[K$(PROJTEXT)Compiling\n"
+	@ printf "\033[K$(PROJTEXT)Compiling\n"
 	@ printf "$(PROJTEXT)Linking\n"
 	@ ar rcs $(NAME) $?
 	@ printf "$(PROJTEXT)\033[1;32mLib built at $(NAME)\033[0;39m\n"
 
 %.o: %.c
-	@ printf "\033[K$(PROJTEXT)Compiling \033[1;33m$<\033[0;39m\r"
+	@ printf "\033[K$(PROJTEXT)Compiling \033[1;33m$<"
+	@ printf " %.0s" {1..$(shell expr 26 - $(shell printf "$<" | wc -m))}
+	@ printf "\033[1;34m[%3.0f%%]\033[0;39m\r" "$(shell bc <<< "scale=1; $(CSRC) / $(NSRC) * 100")"
+	@ $(eval CSRC = $(shell expr $(CSRC) + 1))
 	@ gcc $(CFLAGS) -c $<
 
 clean:
