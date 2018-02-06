@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/02/03 19:07:17 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/02/06 18:22:30 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -123,7 +123,7 @@ $(NAME): $(OBJS)
 %.o: %.c
 	@ printf "\033[K$(PROJTEXT)Compiling \033[1;33m$<"
 	@ printf " %.0s" {1..$(shell expr 26 - $(shell printf "$<" | wc -m))}
-	@ printf "\033[1;34m[%3.0f%%]\033[0;39m\r" "$(shell bc <<< "scale=1; $(CSRC) / $(NSRC) * 100")"
+	@ export LC_ALL=C; printf "\033[1;34m[%3.0f%%]\033[0;39m\r" "$(shell bc <<< "scale=1; $(CSRC) / $(NSRC) * 100")"
 	@ $(eval CSRC = $(shell expr $(CSRC) + 1))
 	@ gcc $(CFLAGS) -c $<
 
