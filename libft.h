@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/02/02 21:52:55 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/02/08 22:57:56 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,7 +180,9 @@ int				ft_returnmsg(char *msg, int fd, int retval);
 
 unsigned int	ft_strcmpi(const char *s1, const char *s2);
 char			*ft_strnjoin(char const *s1, char const *s2, size_t len);
-void			ft_stradd(char **str, char *add);
+int				ft_stradd(char **str, char *add);
+int				ft_strnadd(char **str, char *add, size_t len);
+char			*ft_strmulti(char *fmt, ...);
 char			**ft_strsplitline(char const *s);
 char			*ft_strstart(char *s, char *check);
 void			ft_putstr_color(char const *s, char const *ec);

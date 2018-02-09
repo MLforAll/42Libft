@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stradd.c                                        :+:      :+:    :+:   */
+/*   ft_straddmulti.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/27 20:42:58 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/02/08 22:57:41 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/02/08 22:42:20 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/02/08 22:55:12 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdarg.h>
 #include "libft.h"
 
-int		ft_stradd(char **str, char *add)
+char	*ft_strmulti(char *fmt, ...)
 {
-	char	*tmp;
+	char	*ret;
+	va_list	vlst;
 
-	tmp = *str;
-	if (!(*str = ft_strjoin(*str, add)))
+	if (!(ret = ft_strnew(0)))
+		return (NULL);
+	va_start(vlst, fmt);
+	while (*fmt)
 	{
-		*str = tmp;
-		return (FALSE);
+		if (*fmt != '%' || fmt[1] == '%')
+			ft_strnadd(ret, fmt, 1);
+		else
+			ft_stradd(ret, va_arg(char*));
+		fmt++;
 	}
-	free(tmp);
-	return (TRUE);
+	va_end(vlst);
+	return (ret);
 }
