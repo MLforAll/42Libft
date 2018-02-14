@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/02/06 18:22:30 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/02/14 06:47:06 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,7 @@ SRCS = ft_atoi.c \
 	ft_putstr_color_fd.c \
 	ft_putstr_fd.c \
 	ft_puttab.c \
+	ft_puttab_fd.c \
 	ft_readfd.c \
 	ft_returnmsg.c \
 	ft_strcat.c \

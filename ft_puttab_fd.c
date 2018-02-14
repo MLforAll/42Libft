@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_puttab.c                                        :+:      :+:    :+:   */
+/*   ft_puttab_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 21:29:18 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/02/14 06:46:46 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/02/14 06:46:29 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_puttab(char **tab, char *tabname)
+void	ft_puttab_fd(char **tab, char *tabname, int outfd)
 {
 	unsigned int	i;
 
@@ -23,12 +23,12 @@ void	ft_puttab(char **tab, char *tabname)
 	{
 		if (tabname)
 		{
-			ft_putstr(tabname);
-			ft_putstr("[");
-			ft_putnbr(i);
-			ft_putstr("]: ");
+			ft_putstr_fd(tabname, outfd);
+			ft_putstr_fd("[", outfd);
+			ft_putnbr_fd(i, outfd);
+			ft_putstr_fd("]: ", outfd);
 		}
-		ft_putendl(tab[i]);
+		ft_putendl_fd(tab[i], outfd);
 		i++;
 	}
 }
