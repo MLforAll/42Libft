@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/02/14 06:47:06 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/02/15 22:14:51 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,6 +77,7 @@ SRCS = ft_atoi.c \
 	ft_strjoin.c \
 	ft_strnjoin.c \
 	ft_stradd.c \
+	ft_strnadd.c \
 	ft_strlcat.c \
 	ft_strlen.c \
 	ft_strmap.c \
