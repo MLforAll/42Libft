@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/02/14 06:47:38 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/02/18 04:36:07 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,6 +154,7 @@ int				ft_islower(int c);
 */
 
 void			ft_lstpush(t_list **alst, t_list *add);
+size_t			ft_lstlen(t_list *lst);
 void			ft_putlst(t_list *lst);
 void			ft_putlst_fd(t_list *lst, int fd);
 void			ft_lstbubblesort(t_list **lst, int (*f)(t_list*, t_list*), \
@@ -172,6 +173,7 @@ void			ft_puttab(char **tab, char *tabname);
 void			ft_puttab_fd(char **tab, char *tabname, int outfd);
 size_t			ft_tablen(const char **tab);
 void			ft_tabsort(char **tab);
+char			**ft_ltot(t_list *lst);
 char			**ft_tabjoin(const char **tab1, const char **tab2);
 char			**ft_tabdup(const char **src);
 void			ft_tabfree(char ***tab);
@@ -185,6 +187,8 @@ int				ft_stradd(char **str, char *add);
 int				ft_strnadd(char **str, char *add, size_t len);
 char			*ft_strmulti(char *fmt, ...);
 char			**ft_strsplitline(char const *s);
+void			ft_strrmc(char **s, char c);
+t_list			*ft_splitquote(char *s, char *charset, char qc);
 char			*ft_strstart(char *s, char *check);
 void			ft_putstr_color(char const *s, char const *ec);
 void			ft_putstr_color_fd(char const *s, char const *ec, int fd);

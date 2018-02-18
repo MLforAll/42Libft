@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/02/15 22:14:51 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/02/18 04:37:32 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRCS = ft_atoi.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
 	ft_lstnew.c \
+	ft_lstlen.c \
 	ft_lstbubblesort.c \
 	ft_lstmergesort.c \
 	ft_lstinssort.c \
@@ -91,10 +92,13 @@ SRCS = ft_atoi.c \
 	ft_strrchr.c \
 	ft_strsplit.c \
 	ft_strsplitline.c \
+	ft_strrmc.c \
+	ft_splitquote.c \
 	ft_strstr.c \
 	ft_strsub.c \
 	ft_strtrim.c \
 	ft_tabnew.c \
+	ft_ltot.c \
 	ft_tabfree.c \
 	ft_tabjoin.c \
 	ft_tabdup.c \
