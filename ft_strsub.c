@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 17:55:46 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/12/08 16:46:31 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/02/20 03:18:51 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	char	*ret;
+	unsigned int	i;
+	char			*ret;
 
 	i = 0;
-	if (!s)
-		return (NULL);
-	ret = ft_strnew(len);
-	if (!ret)
+	if (!s || !(ret = ft_strnew(len)))
 		return (NULL);
 	while (i < len)
 	{

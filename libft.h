@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/02/18 08:11:48 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/02/20 02:44:42 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ void			*ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t			ft_strlen(const char *str);
+size_t			ft_strclen(const char *str, char c);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strcpy(char *dst, const char *src);
@@ -189,7 +190,6 @@ int				ft_strisnumeric(char *s);
 char			*ft_strmulti(char *fmt, ...);
 char			**ft_strsplitline(char const *s);
 void			ft_strrmc(char **s, char c);
-t_list			*ft_splitquote(char *s, char *charset, char qc);
 char			*ft_strstart(char *s, char *check);
 void			ft_putstr_color(char const *s, char const *ec);
 void			ft_putstr_color_fd(char const *s, char const *ec, int fd);

@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strclen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/06 19:24:21 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/02/20 03:18:08 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/02/20 02:42:26 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/02/20 02:44:16 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strdup(const char *s1)
+size_t	ft_strclen(const char *s, char c)
 {
-	char			*ret;
-	unsigned int	cnt;
+	size_t			ret;
 
-	cnt = 0;
-	if (!(ret = (char*)malloc(sizeof(char) * (ft_strlen(s1) + 1))))
-		return (NULL);
-	while (s1[cnt])
-	{
-		ret[cnt] = s1[cnt];
-		cnt++;
-	}
-	ret[cnt] = '\0';
+	ret = 0;
+	while (s[ret] && s[ret] != c)
+		ret++;
 	return (ret);
 }
