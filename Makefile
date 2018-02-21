@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/02/20 02:42:56 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/02/21 18:17:14 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,6 +92,8 @@ SRCS = ft_atoi.c \
 	ft_strnew.c \
 	ft_strnstr.c \
 	ft_strrchr.c \
+	ft_strstart.c \
+	ft_strdiff.c \
 	ft_strsplit.c \
 	ft_strsplitline.c \
 	ft_strrmc.c \
@@ -109,11 +111,14 @@ SRCS = ft_atoi.c \
 	ft_toupper.c \
 	ft_putnbr_ll.c \
 	ft_putnbr_ll_fd.c \
-	ft_strstart.c \
 	ft_isatty.c \
 	get_next_line.c
 NSRC = $(shell echo "$(SRCS)" | awk '{print NF}')
-CSRC = 1
+ifeq ($(shell [ ! -z "`which bc`" ] && [ ! -z "`which awk`" ] && echo true),true)
+	CSRC = 1
+else
+	CSRC = 0
+endif
 
 OBJS = $(SRCS:%.c=%.o)
 
@@ -129,9 +134,12 @@ $(NAME): $(OBJS)
 
 %.o: %.c
 	@ printf "\033[K$(PROJTEXT)Compiling \033[1;33m$<"
+ifneq ($(CSRC),0)
 	@ printf " %.0s" {1..$(shell expr 26 - $(shell printf "$<" | wc -m))}
-	@ export LC_ALL=C; printf "\033[1;34m[%3.0f%%]\033[0;39m\r" "$(shell bc <<< "scale=1; $(CSRC) / $(NSRC) * 100")"
+	@ export LC_ALL=C; printf "\033[1;34m[%3.0f%%]" "$(shell bc <<< "scale=1; $(CSRC) / $(NSRC) * 100")"
 	@ $(eval CSRC = $(shell expr $(CSRC) + 1))
+endif
+	@ printf "\033[0;39m\r"
 	@ gcc $(CFLAGS) -c $<
 
 clean:
