@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 20:42:58 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/02/15 22:16:29 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/02/21 22:52:37 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int		ft_strnadd(char **str, char *add, size_t len)
 {
 	char	*tmp;
 
+	if (!str || !add)
+		return (FALSE);
 	tmp = *str;
 	if (!(*str = ft_strnjoin(*str, add, len)))
 	{
