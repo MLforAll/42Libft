@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/02/21 17:44:09 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/02/22 22:38:37 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -189,7 +189,7 @@ int				ft_strnadd(char **str, char *add, size_t len);
 int				ft_strisnumeric(char *s);
 char			*ft_strmulti(char *fmt, ...);
 char			**ft_strsplitline(char const *s);
-void			ft_strrmc(char **s, char c);
+char			*ft_strrmc(char *s, char c);
 char			*ft_strstart(char *s, char *check);
 char			*ft_strdiff(char *base, char *check);
 void			ft_putstr_color(char const *s, char const *ec);

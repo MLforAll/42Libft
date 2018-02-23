@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:01:52 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/20 14:26:10 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/02/22 22:43:17 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,11 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		return (NULL);
 	if (content)
 	{
-		lst->content = ft_memalloc(content_size);
+		if (!(lst->content = ft_memalloc(content_size)))
+		{
+			free(lst);
+			return (NULL);
+		}
 		ft_memmove(lst->content, content, content_size);
 	}
 	else
