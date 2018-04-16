@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/02/22 22:38:37 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/04/16 16:55:20 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <string.h>
 
 /*
-** Colors
+** ANSI Colors
 */
 
 # define BLACKCLR			"\033[0;30m"
@@ -29,15 +29,14 @@
 # define WHITECLR			"\033[0;37m"
 # define DEFAULTCLR			"\033[0;39m"
 
-# define LIGHTBLACKCLR		"\033[0;30m"
-# define LIGHTREDCLR		"\033[0;31m"
-# define LIGHTGREENCLR		"\033[0;32m"
-# define LIGHTYELLOWCLR		"\033[0;33m"
-# define LIGHTBLUECLR		"\033[0;34m"
-# define LIGHTPURPLECLR		"\033[0;35m"
-# define LIGHTCYANCLR		"\033[0;36m"
-# define LIGHTWHITECLR		"\033[0;37m"
-# define LIGHTDEFAULTCLR	"\033[0;39m"
+# define LIGHTBLACKCLR		"\033[1;30m"
+# define LIGHTREDCLR		"\033[1;31m"
+# define LIGHTGREENCLR		"\033[1;32m"
+# define LIGHTYELLOWCLR		"\033[1;33m"
+# define LIGHTBLUECLR		"\033[1;34m"
+# define LIGHTPURPLECLR		"\033[1;35m"
+# define LIGHTCYANCLR		"\033[1;36m"
+# define LIGHTWHITECLR		"\033[1;37m"
 
 /*
 ** TRUE/YES and FALSE/NO
@@ -57,6 +56,16 @@ typedef struct	s_size
 	size_t			width;
 	size_t			height;
 }				t_size;
+
+/*
+** pt struct (x/y -- same as t_size)
+*/
+
+typedef struct	s_point
+{
+	unsigned int	x;
+	unsigned int	y;
+}				t_point;
 
 /*
 ** t_list def
