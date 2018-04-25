@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/04/25 09:18:51 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/04/25 13:27:16 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,107 +14,110 @@ NAME = libft.a
 
 CFLAGS = -Wall -Werror -Wextra
 
-SRCS = ft_atoi.c \
-	ft_bzero.c \
-	ft_isalnum.c \
-	ft_isalpha.c \
-	ft_isascii.c \
-	ft_isdigit.c \
-	ft_islower.c \
-	ft_isprint.c \
-	ft_isupper.c \
+SRCDIR = srcs
+SRCFILES = ft_atoi.c \
 	ft_itoa.c \
 	ft_lltoa.c \
-	ft_lstadd.c \
-	ft_lstpush.c \
-	ft_lstdel.c \
-	ft_lstdelone.c \
-	ft_lstiter.c \
-	ft_lstmap.c \
-	ft_lstnew.c \
-	ft_lstlen.c \
-	ft_lstbubblesort.c \
-	ft_lstmergesort.c \
-	ft_lstinssort.c \
-	ft_memalloc.c \
-	ft_memccpy.c \
-	ft_memchr.c \
-	ft_memcmp.c \
-	ft_memcpy.c \
-	ft_memdel.c \
-	ft_memmove.c \
-	ft_memset.c \
-	ft_nbrlen.c \
-	ft_nbrlen_base.c \
-	ft_putchar.c \
-	ft_putchar_fd.c \
-	ft_putendl.c \
-	ft_putendl_color.c \
-	ft_putendl_color_fd.c \
-	ft_putendl_fd.c \
-	ft_putlst.c \
-	ft_putlst_fd.c \
-	ft_putnbr.c \
-	ft_putnbr_fd.c \
-	ft_putstr.c \
-	ft_putstr_color.c \
-	ft_putstr_color_fd.c \
-	ft_putstr_fd.c \
-	ft_puttab.c \
-	ft_puttab_fd.c \
-	ft_readfd.c \
-	ft_returnmsg.c \
-	ft_strcat.c \
-	ft_strchr.c \
-	ft_strclr.c \
-	ft_strcmpi.c \
-	ft_strcmp.c \
-	ft_strcpy.c \
-	ft_strdel.c \
-	ft_strdup.c \
-	ft_strequ.c \
-	ft_striter.c \
-	ft_striteri.c \
-	ft_strjoin.c \
-	ft_strnjoin.c \
-	ft_stradd.c \
-	ft_strnadd.c \
-	ft_strisnumeric.c \
-	ft_strlcat.c \
-	ft_strlen.c \
-	ft_strclen.c \
-	ft_strmap.c \
-	ft_strmapi.c \
-	ft_strncat.c \
-	ft_strncmp.c \
-	ft_strncpy.c \
-	ft_strnequ.c \
-	ft_strnew.c \
-	ft_strnstr.c \
-	ft_strrchr.c \
-	ft_strstart.c \
-	ft_strdiff.c \
-	ft_strsplit.c \
-	ft_strsplitline.c \
-	ft_strrmc.c \
-	ft_strstr.c \
-	ft_strsub.c \
-	ft_strtrim.c \
-	ft_tabnew.c \
-	ft_ltot.c \
-	ft_tabfree.c \
-	ft_tabjoin.c \
-	ft_tabdup.c \
-	ft_tablen.c \
-	ft_tabsort.c \
-	ft_tolower.c \
-	ft_toupper.c \
-	ft_putnbr_ll.c \
-	ft_putnbr_ll_fd.c \
 	ft_isatty.c \
-	ft_nbrcpy.c \
-	ft_nbrcat.c \
-	get_next_line.c
+	get_next_line.c \
+	mem/ft_bzero.c \
+	mem/ft_memalloc.c \
+	mem/ft_memccpy.c \
+	mem/ft_memchr.c \
+	mem/ft_memcmp.c \
+	mem/ft_memcpy.c \
+	mem/ft_memdel.c \
+	mem/ft_memmove.c \
+	mem/ft_memset.c \
+	list/ft_lstadd.c \
+	list/ft_lstpush.c \
+	list/ft_lstdel.c \
+	list/ft_lstdelone.c \
+	list/ft_lstiter.c \
+	list/ft_lstmap.c \
+	list/ft_lstnew.c \
+	list/ft_lstlen.c \
+	list/ft_lstbubblesort.c \
+	list/ft_lstmergesort.c \
+	list/ft_lstinssort.c \
+	list/ft_ltot.c \
+	nbr/ft_nbrlen.c \
+	nbr/ft_nbrlen_base.c \
+	nbr/ft_nbrcpy.c \
+	nbr/ft_nbrcat.c \
+	print/ft_putchar.c \
+	print/ft_putchar_fd.c \
+	print/ft_putendl.c \
+	print/ft_putendl_color.c \
+	print/ft_putendl_color_fd.c \
+	print/ft_putendl_fd.c \
+	print/ft_putlst.c \
+	print/ft_putlst_fd.c \
+	print/ft_putnbr.c \
+	print/ft_putnbr_fd.c \
+	print/ft_putstr.c \
+	print/ft_putstr_color.c \
+	print/ft_putstr_color_fd.c \
+	print/ft_putstr_fd.c \
+	print/ft_puttab.c \
+	print/ft_puttab_fd.c \
+	print/ft_putnbr_ll.c \
+	print/ft_putnbr_ll_fd.c \
+	misc/ft_readfd.c \
+	misc/ft_returnmsg.c \
+	string/ft_strcat.c \
+	string/ft_strchr.c \
+	string/ft_strclr.c \
+	string/ft_strcmpi.c \
+	string/ft_strcmp.c \
+	string/ft_strcpy.c \
+	string/ft_strdel.c \
+	string/ft_strdup.c \
+	string/ft_strequ.c \
+	string/ft_striter.c \
+	string/ft_striteri.c \
+	string/ft_strjoin.c \
+	string/ft_strnjoin.c \
+	string/ft_stradd.c \
+	string/ft_strnadd.c \
+	string/ft_strisnumeric.c \
+	string/ft_strlcat.c \
+	string/ft_strlen.c \
+	string/ft_strclen.c \
+	string/ft_strmap.c \
+	string/ft_strmapi.c \
+	string/ft_strncat.c \
+	string/ft_strncmp.c \
+	string/ft_strncpy.c \
+	string/ft_strnequ.c \
+	string/ft_strnew.c \
+	string/ft_strnstr.c \
+	string/ft_strrchr.c \
+	string/ft_strstart.c \
+	string/ft_strdiff.c \
+	string/ft_strsplit.c \
+	string/ft_strsplitline.c \
+	string/ft_strrmc.c \
+	string/ft_strstr.c \
+	string/ft_strsub.c \
+	string/ft_strtrim.c \
+	char/ft_tolower.c \
+	char/ft_toupper.c \
+	char/ft_isalnum.c \
+	char/ft_isalpha.c \
+	char/ft_isascii.c \
+	char/ft_isdigit.c \
+	char/ft_islower.c \
+	char/ft_isprint.c \
+	char/ft_isupper.c \
+	wordtab/ft_tabnew.c \
+	wordtab/ft_tabfree.c \
+	wordtab/ft_tabjoin.c \
+	wordtab/ft_tabdup.c \
+	wordtab/ft_tablen.c \
+	wordtab/ft_tabsort.c
+SRCS = $(addprefix $(SRCDIR)/, $(SRCFILES))
+
 NSRC = $(shell echo "$(SRCS)" | awk '{print NF}')
 ifeq ($(shell [ ! -z "`which bc`" ] && [ ! -z "`which awk`" ] && echo true),true)
 	CSRC = 1
@@ -122,7 +125,8 @@ else
 	CSRC = 0
 endif
 
-OBJS = $(SRCS:%.c=%.o)
+OBJDIR = objs
+OBJS = $(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 PROJTEXT = \033[1;34mlibft: \033[0;39m
 
@@ -134,15 +138,16 @@ $(NAME): $(OBJS)
 	@ ar rcs $(NAME) $?
 	@ printf "$(PROJTEXT)\033[1;32mLib built at $(NAME)\033[0;39m\n"
 
-%.o: %.c
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
+	@ if [ ! -d $(dir $@) ]; then mkdir -p $(dir $@); fi
 	@ printf "\033[K$(PROJTEXT)Compiling \033[1;33m$<"
 ifneq ($(CSRC),0)
-	@ printf " %.0s" {1..$(shell expr 26 - $(shell printf "$<" | wc -m))}
+	@ printf " %.0s" {1..$(shell expr 40 - $(shell printf "$<" | wc -m))}
 	@ export LC_ALL=C; printf "\033[1;34m[%3.0f%%]" "$(shell bc <<< "scale=1; $(CSRC) / $(NSRC) * 100")"
 	@ $(eval CSRC = $(shell expr $(CSRC) + 1))
 endif
 	@ printf "\033[0;39m\r"
-	@ gcc $(CFLAGS) -c $<
+	@ gcc $(CFLAGS) -I includes -c $< -o $@
 
 clean:
 	@ rm -f $(OBJS)
