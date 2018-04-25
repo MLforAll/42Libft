@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/04/16 16:55:20 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/04/25 09:18:16 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -211,6 +211,9 @@ size_t			ft_nbrlen(long long n);
 void			ft_putnbr_ll_fd(long long n, int fd);
 void			ft_putnbr_ll(long long n);
 char			*ft_lltoa(long long nl);
+
+void			ft_nbrcpy(char *dst, long nb);
+void			ft_nbrcat(char *dst, long nb);
 
 int				ft_isatty(int fildes);
 

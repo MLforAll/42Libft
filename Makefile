@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/02/21 18:17:14 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/04/25 09:18:51 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -112,6 +112,8 @@ SRCS = ft_atoi.c \
 	ft_putnbr_ll.c \
 	ft_putnbr_ll_fd.c \
 	ft_isatty.c \
+	ft_nbrcpy.c \
+	ft_nbrcat.c \
 	get_next_line.c
 NSRC = $(shell echo "$(SRCS)" | awk '{print NF}')
 ifeq ($(shell [ ! -z "`which bc`" ] && [ ! -z "`which awk`" ] && echo true),true)
