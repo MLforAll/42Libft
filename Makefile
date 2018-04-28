@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/04/25 13:27:16 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/04/28 08:17:02 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCFILES = ft_atoi.c \
 	ft_itoa.c \
 	ft_lltoa.c \
 	ft_isatty.c \
+	ft_switch.c \
 	get_next_line.c \
 	mem/ft_bzero.c \
 	mem/ft_memalloc.c \

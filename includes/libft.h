@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/04/25 09:18:16 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/04/28 08:18:11 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -216,5 +216,10 @@ void			ft_nbrcpy(char *dst, long nb);
 void			ft_nbrcat(char *dst, long nb);
 
 int				ft_isatty(int fildes);
+
+int				ft_switch(void *dataref,
+						void *tableref,
+						size_t tablelen,
+						int (*cmp)(void *, void *));
 
 #endif
