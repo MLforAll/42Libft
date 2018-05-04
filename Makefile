@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/04/28 08:17:02 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/05/04 22:51:27 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,12 +15,7 @@ NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra
 
 SRCDIR = srcs
-SRCFILES = ft_atoi.c \
-	ft_itoa.c \
-	ft_lltoa.c \
-	ft_isatty.c \
-	ft_switch.c \
-	get_next_line.c \
+SRCFILES = get_next_line.c \
 	mem/ft_bzero.c \
 	mem/ft_memalloc.c \
 	mem/ft_memccpy.c \
@@ -46,6 +41,9 @@ SRCFILES = ft_atoi.c \
 	nbr/ft_nbrlen_base.c \
 	nbr/ft_nbrcpy.c \
 	nbr/ft_nbrcat.c \
+	nbr/ft_atoi.c \
+	nbr/ft_itoa.c \
+	nbr/ft_lltoa.c \
 	print/ft_putchar.c \
 	print/ft_putchar_fd.c \
 	print/ft_putendl.c \
@@ -66,6 +64,8 @@ SRCFILES = ft_atoi.c \
 	print/ft_putnbr_ll_fd.c \
 	misc/ft_readfd.c \
 	misc/ft_returnmsg.c \
+	misc/ft_isatty.c \
+	misc/ft_switch.c \
 	string/ft_strcat.c \
 	string/ft_strchr.c \
 	string/ft_strclr.c \

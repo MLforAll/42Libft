@@ -1,25 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strisnumeric.c                                  :+:      :+:    :+:   */
+/*   btree.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/18 08:10:34 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/04/29 22:14:01 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/05/04 22:37:57 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef BTREE_H
+# define BTREE_H
 
-int		ft_strisnumeric(char *s)
-{
-	if (!*s)
-		return (FALSE);
-	while (*s)
-	{
-		if (!ft_isdigit(*(s++)))
-			return (FALSE);
-	}
-	return (TRUE);
-}
+#endif
