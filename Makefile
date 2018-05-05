@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/05/04 22:51:27 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/05/05 16:31:55 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,9 @@ SRCFILES = get_next_line.c \
 	list/ft_lstmergesort.c \
 	list/ft_lstinssort.c \
 	list/ft_ltot.c \
+	btree/ft_btnew.c \
+	btree/ft_btattach.c \
+	btree/ft_btdelone.c \
 	nbr/ft_nbrlen.c \
 	nbr/ft_nbrlen_base.c \
 	nbr/ft_nbrcpy.c \
@@ -62,6 +65,7 @@ SRCFILES = get_next_line.c \
 	print/ft_puttab_fd.c \
 	print/ft_putnbr_ll.c \
 	print/ft_putnbr_ll_fd.c \
+	print/ft_putubt.c \
 	misc/ft_readfd.c \
 	misc/ft_returnmsg.c \
 	misc/ft_isatty.c \

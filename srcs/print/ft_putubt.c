@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   btree.h                                            :+:      :+:    :+:   */
+/*   ft_putubt.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/05 16:30:56 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/05/05 16:28:21 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/05/05 16:32:54 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BTREE_H
-# define BTREE_H
+#include "libft.h"
 
-typedef struct	s_btree
+void	ft_putubt(t_btree *bt, void (*ft_putelem)(void*, size_t))
 {
-	void			*data;
-	size_t			data_size;
-	struct s_btree	*left;
-	struct s_btree	*right;
-}				t_btree;
-
-t_btree	*ft_btnew(void *data, size_t data_size);
-void	ft_btattach(t_btree *node, t_btree *left, t_btree *right);
-void	ft_btdelone(t_btree **node, void (*del)(void*, size_t));
-
-#endif
+	if (!bt)
+		return ;
+	ft_putelem(bt->data, bt->data_size);
+	if (bt->left)
+	{
+		ft_putendl("turn left");
+		ft_putubt(bt->left, ft_putelem);
+		ft_putendl("back up");
+	}
+	if (bt->right)
+	{
+		ft_putendl("turn right");
+		ft_putubt(bt->right, ft_putelem);
+		ft_putendl("back up");
+	}
+}

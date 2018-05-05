@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   btree.h                                            :+:      :+:    :+:   */
+/*   ft_btnew.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/05 16:30:56 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/05/05 16:18:34 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/05/05 17:23:55 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BTREE_H
-# define BTREE_H
+#include <stdlib.h>
+#include "libft.h"
 
-typedef struct	s_btree
+t_btree	*ft_btnew(void *data, size_t data_size)
 {
-	void			*data;
-	size_t			data_size;
-	struct s_btree	*left;
-	struct s_btree	*right;
-}				t_btree;
+	t_btree	*ret;
 
-t_btree	*ft_btnew(void *data, size_t data_size);
-void	ft_btattach(t_btree *node, t_btree *left, t_btree *right);
-void	ft_btdelone(t_btree **node, void (*del)(void*, size_t));
-
-#endif
+	if (!(ret = (t_btree*)malloc(sizeof(t_btree))))
+		return (NULL);
+	ft_bzero(ret, sizeof(t_btree));
+	if (data)
+	{
+		if (!(ret->data = malloc(data_size)))
+		{
+			free(ret);
+			return (NULL);
+		}
+		ft_memcpy(ret->data, data, data_size);
+		ret->data_size = data_size;
+	}
+	return (ret);
+}

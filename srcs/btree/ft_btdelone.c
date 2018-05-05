@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   btree.h                                            :+:      :+:    :+:   */
+/*   ft_btdelone.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/05 16:30:56 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/05/05 16:23:26 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/05/05 16:32:27 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BTREE_H
-# define BTREE_H
+#include <stdlib.h>
+#include "libft.h"
 
-typedef struct	s_btree
+void	ft_btdelone(t_btree **node, void (*del)(void*, size_t))
 {
-	void			*data;
-	size_t			data_size;
-	struct s_btree	*left;
-	struct s_btree	*right;
-}				t_btree;
-
-t_btree	*ft_btnew(void *data, size_t data_size);
-void	ft_btattach(t_btree *node, t_btree *left, t_btree *right);
-void	ft_btdelone(t_btree **node, void (*del)(void*, size_t));
-
-#endif
+	if (!node)
+		return ;
+	del((*node)->data, (*node)->data_size);
+	free(*node);
+	*node = NULL;
+}
