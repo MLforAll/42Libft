@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:57:00 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/11 15:24:36 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/05/09 19:44:36 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,9 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	{
 		dstc[i] = srcc[i];
 		if (srcc[i] == (unsigned char)c)
-		{
-			dst = dstc;
-			return (&dstc[i + 1]);
+			return ((void*)&dstc[i + 1]);
 		}
 		i++;
 	}
-	dst = dstc;
 	return (NULL);
 }

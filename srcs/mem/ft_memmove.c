@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 22:39:12 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/11 15:24:55 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/05/09 19:43:09 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	void			*bak;
 	unsigned char	*cast;
 
-	bak = dst;
 	cast = (unsigned char*)dst;
 	if (src < dst)
 	{
@@ -26,6 +24,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 		ft_memcpy(cast, src, len);
-	dst = cast;
-	return (bak);
+	return (dst);
 }

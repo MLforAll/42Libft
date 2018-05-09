@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_tstrcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 16:23:31 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/09 19:44:15 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/05/08 00:46:42 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/05/08 01:03:42 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+int		ft_tstrcpy(t_str *mstr, char *add)
 {
-	size_t			i;
-	unsigned char	*bc;
+	size_t	addlen;
 
-	i = 0;
-	bc = (unsigned char*)b;
-	while (i < len)
+	if (!add || (addlen = ft_strlen(add)) == 0)
+		return (FALSE);
+	if (addlen > mstr->bufflen)
 	{
-		bc[i] = (unsigned char)c;
-		i++;
+		if (mstr->bufflen == 0)
+			mstr->bufflen = MSTR_DEFAULT_BUFFLEN;
+		while (mstr->bufflen < addlen)
+			mstr->bufflen *= 2;
+		free(mstr->s);
+		if (!(mstr->s = ft_strnew(mstr->bufflen)))
+			return (FALSE);
 	}
-	return (b);
+	ft_strcpy(mstr->s, add);
+	return (TRUE);
 }

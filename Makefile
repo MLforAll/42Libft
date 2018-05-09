@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/05/05 16:31:55 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/05/08 01:00:57 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -120,7 +120,11 @@ SRCFILES = get_next_line.c \
 	wordtab/ft_tabjoin.c \
 	wordtab/ft_tabdup.c \
 	wordtab/ft_tablen.c \
-	wordtab/ft_tabsort.c
+	wordtab/ft_tabsort.c \
+	t_str/ft_tstrnew.c \
+	t_str/ft_tstrdel.c \
+	t_str/ft_tstrcpy.c \
+	t_str/ft_tstrcat.c
 SRCS = $(addprefix $(SRCDIR)/, $(SRCFILES))
 
 NSRC = $(shell echo "$(SRCS)" | awk '{print NF}')

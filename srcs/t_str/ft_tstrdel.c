@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_tstrdel.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 16:23:31 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/09 19:44:15 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/05/08 00:58:28 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/05/08 00:59:27 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_tstrdel(t_str *mstr)
 {
-	size_t			i;
-	unsigned char	*bc;
-
-	i = 0;
-	bc = (unsigned char*)b;
-	while (i < len)
-	{
-		bc[i] = (unsigned char)c;
-		i++;
-	}
-	return (b);
+	if (!mstr)
+		return ;
+	ft_strdel(&mstr->s);
+	mstr->bufflen = 0;
 }

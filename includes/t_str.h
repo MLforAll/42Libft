@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   t_str.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 16:23:31 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/09 19:44:15 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/05/08 00:42:41 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/05/08 01:02:31 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef T_STR_H
+# define T_STR_H
 
-void	*ft_memset(void *b, int c, size_t len)
+# define MSTR_DEFAULT_BUFFLEN	10
+
+/*
+** Data Structure
+*/
+
+typedef struct	s_str
 {
-	size_t			i;
-	unsigned char	*bc;
+	char	*s;
+	size_t	bufflen;
+}				t_str;
 
-	i = 0;
-	bc = (unsigned char*)b;
-	while (i < len)
-	{
-		bc[i] = (unsigned char)c;
-		i++;
-	}
-	return (b);
-}
+/*
+** t_str data type functions
+*/
+
+t_str	ft_tstrnew(void);
+void	ft_tstrdel(t_str *mstr);
+int		ft_tstrcat(t_str *mstr, char *add);
+int		ft_tstrcpy(t_str *mstr, char *add);
+
+#endif
