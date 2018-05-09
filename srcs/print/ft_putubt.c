@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/09 22:45:10 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/09 22:46:11 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/05/10 01:41:40 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	ft_putubt_core(t_btree *bt,
 		ft_putnbr(lvl);
 		ft_putstr(": ");
 		ft_putendl("turn right");
-		ft_putubt_core(bt->left, ft_putelem, lvl + 1);
+		ft_putubt_core(bt->right, ft_putelem, lvl + 1);
 		ft_putnbr(lvl + 1);
 		ft_putstr(": ");
 		ft_putendl("back up");
