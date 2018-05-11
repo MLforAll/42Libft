@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/05/08 01:00:57 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/05/11 01:10:36 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -118,6 +118,8 @@ SRCFILES = get_next_line.c \
 	wordtab/ft_tabnew.c \
 	wordtab/ft_tabfree.c \
 	wordtab/ft_tabjoin.c \
+	wordtab/ft_tabaddstr.c \
+	wordtab/ft_tabadd.c \
 	wordtab/ft_tabdup.c \
 	wordtab/ft_tablen.c \
 	wordtab/ft_tabsort.c \
