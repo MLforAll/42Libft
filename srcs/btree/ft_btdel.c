@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabadd.c                                        :+:      :+:    :+:   */
+/*   ft_btdel.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/11 01:00:54 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/11 19:37:01 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/05/05 16:23:26 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/05/11 19:31:58 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int		ft_tabadd(char ***wt, char **wt2)
+void	ft_btdel(t_btree **bt, void (*del)(void*, size_t))
 {
-	char	**tmp;
-
-	if (!wt || !wt2)
-		return (FALSE);
-	if (!(tmp = ft_tabjoin(*wt, wt2)))
-		return (FALSE);
-	ft_tabfree(wt);
-	*wt = tmp;
-	return (TRUE);
+	if (!bt || !*bt)
+		return ;
+	if ((*bt)->left)
+		ft_btdel(&(*bt)->left, del);
+	if ((*bt)->right)
+		ft_btdel(&(*bt)->right, del);
+	ft_btdelone(bt, del);
 }
