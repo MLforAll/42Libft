@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabcat.c                                        :+:      :+:    :+:   */
+/*   ft_tabjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 21:51:11 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/04 06:10:08 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/05/12 02:11:32 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char		**ft_tabjoin(const char **tab1, const char **tab2)
+char		**ft_tabjoin(char **tab1, char **tab2)
 {
 	size_t	len1;
 	size_t	len2;

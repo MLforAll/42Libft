@@ -6,31 +6,29 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/25 19:11:01 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/01/25 21:12:53 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/05/12 01:53:48 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	**ft_tabdup(const char **src)
+char	**ft_tabdup(char **src)
 {
 	char	**ret;
 	char	**bw;
-	char	**bws;
 
 	if (!(ret = (char**)malloc(sizeof(char*) * (ft_tablen(src) + 1))))
 		return (NULL);
 	bw = ret;
-	bws = (char**)src;
-	while (*bws)
+	while (*src)
 	{
-		if (!(*bw = ft_strdup(*bws)))
+		if (!(*bw = ft_strdup(*src)))
 		{
 			ft_tabfree(&ret);
 			return (NULL);
 		}
-		bws++;
+		src++;
 		bw++;
 	}
 	*bw = NULL;

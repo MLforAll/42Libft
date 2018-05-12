@@ -6,13 +6,13 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 21:51:55 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/11 21:54:04 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/05/12 01:54:27 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_tablen(const char **tab)
+size_t		ft_tablen(char **tab)
 {
 	size_t	ret;
 
