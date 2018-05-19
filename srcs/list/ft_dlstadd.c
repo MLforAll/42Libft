@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_dlstadd.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 16:01:52 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/19 11:49:49 by kdumarai         ###   ########.fr       */
+/*   Created: 2017/11/08 16:15:10 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/05/19 11:58:11 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+void	ft_dlstadd(t_dlist **alst, t_dlist *new)
 {
-	t_list *lst;
+	t_dlist	*tmp;
 
-	if (!(lst = (t_list*)ft_memalloc(sizeof(t_list))))
-		return (NULL);
-	if (content)
-	{
-		if (!(lst->content = ft_memalloc(content_size)))
-		{
-			free(lst);
-			return (NULL);
-		}
-		ft_memcpy(lst->content, content, content_size);
-		lst->content_size = content_size;
-	}
-	return (lst);
+	if (!alst || !new)
+		return ;
+	tmp = new;
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = *alst;
+	if (*alst)
+		(*alst)->prev = tmp;
+	*alst = new;
 }

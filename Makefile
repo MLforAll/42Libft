@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/05/19 02:14:47 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/05/19 12:01:30 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,18 +25,24 @@ SRCFILES = get_next_line.c \
 	mem/ft_memdel.c \
 	mem/ft_memmove.c \
 	mem/ft_memset.c \
+	list/ft_lstnew.c \
+	list/ft_lstnewom.c \
 	list/ft_lstadd.c \
 	list/ft_lstpush.c \
 	list/ft_lstdel.c \
 	list/ft_lstdelone.c \
 	list/ft_lstiter.c \
 	list/ft_lstmap.c \
-	list/ft_lstnew.c \
 	list/ft_lstlen.c \
 	list/ft_lstbubblesort.c \
 	list/ft_lstmergesort.c \
 	list/ft_lstinssort.c \
 	list/ft_ltot.c \
+	list/ft_dlstnew.c \
+	list/ft_dlstadd.c \
+	list/ft_dlstpush.c \
+	list/ft_dlstdel.c \
+	list/ft_dlstdelone.c \
 	btree/ft_btnew.c \
 	btree/ft_btattach.c \
 	btree/ft_btdelone.c \

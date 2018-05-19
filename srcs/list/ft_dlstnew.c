@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_dlstnew.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:01:52 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/19 11:49:49 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/05/19 11:52:23 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+t_dlist	*ft_dlstnew(const void *content, size_t content_size)
 {
-	t_list *lst;
+	t_dlist *lst;
 
-	if (!(lst = (t_list*)ft_memalloc(sizeof(t_list))))
+	if (!(lst = (t_dlist*)ft_memalloc(sizeof(t_dlist))))
 		return (NULL);
 	if (content)
 	{
