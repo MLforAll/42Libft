@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/19 02:13:55 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/05/21 20:35:01 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 # include "list.h"
 # include "print.h"
 # include "misc.h"
+# include "file.h"
 
 /*
 ** ANSI Colors

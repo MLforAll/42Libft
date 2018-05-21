@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/05/19 12:01:30 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/05/21 20:36:58 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -113,6 +113,7 @@ SRCFILES = get_next_line.c \
 	string/ft_strstr.c \
 	string/ft_strsub.c \
 	string/ft_strtrim.c \
+	string/get_last_component.c \
 	char/ft_tolower.c \
 	char/ft_toupper.c \
 	char/ft_isalnum.c \
@@ -136,7 +137,10 @@ SRCFILES = get_next_line.c \
 	t_str/ft_tstrcat.c \
 	t_tab/ft_ttabnew.c \
 	t_tab/ft_ttabcat.c \
-	t_tab/ft_ttabdel.c
+	t_tab/ft_ttabdel.c \
+	file/get_name_from_path.c \
+	file/get_name_from_path_2.c \
+	file/get_basedir.c
 SRCS = $(addprefix $(SRCDIR)/, $(SRCFILES))
 
 NSRC = $(shell echo "$(SRCS)" | awk '{print NF}')
