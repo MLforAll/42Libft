@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/05/21 20:36:58 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/05/22 17:11:48 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,8 @@ SRCFILES = get_next_line.c \
 	print/ft_putlst_fd.c \
 	print/ft_putnbr.c \
 	print/ft_putnbr_fd.c \
+	print/ft_putnbrl.c \
+	print/ft_putnbrl_fd.c \
 	print/ft_putstr.c \
 	print/ft_putstr_color.c \
 	print/ft_putstr_color_fd.c \
