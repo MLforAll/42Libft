@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 13:25:44 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/27 18:26:27 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/05/27 19:37:54 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,14 @@ char	*ft_readfd(int fd, size_t buff_size)
 	char	*bptr;
 	int		rbytes;
 
+	dbuff = NULL;
 	if (!(ret = ft_strnew(0))
 		|| (buff_size > 512 && !(dbuff = ft_strnew(buff_size))))
 		return (NULL);
 	bptr = (dbuff) ? dbuff : sbuff;
 	while ((rbytes = read(fd, bptr, buff_size)) > 0)
 	{
-		buff[rbytes] = '\0';
+		bptr[rbytes] = '\0';
 		ft_stradd(&ret, bptr);
 	}
 	ft_strdel(&dbuff);
