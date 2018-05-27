@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_readfd.c                                        :+:      :+:    :+:   */
+/*   ft_putnchar_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/12 13:25:44 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/27 18:26:27 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/05/25 16:37:48 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/05/25 16:44:31 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
-#include <unistd.h>
+#include "libft.h"
 
-char	*ft_readfd(int fd, size_t buff_size)
+void	ft_putnchar_fd(char c, size_t n, int fd)
 {
-	char	*ret;
-	char	sbuff[513];
-	char	*dbuff;
-	char	*bptr;
-	int		rbytes;
+	char	*str;
 
-	if (!(ret = ft_strnew(0))
-		|| (buff_size > 512 && !(dbuff = ft_strnew(buff_size))))
-		return (NULL);
-	bptr = (dbuff) ? dbuff : sbuff;
-	while ((rbytes = read(fd, bptr, buff_size)) > 0)
+	if (!(str = (char*)malloc(sizeof(char) * (n + 1))))
 	{
-		buff[rbytes] = '\0';
-		ft_stradd(&ret, bptr);
+		while (n--)
+			ft_putchar_fd(c, fd);
+		return ;
 	}
-	ft_strdel(&dbuff);
-	return (ret);
+	ft_memset(str, c, n);
+	str[n] = '\0';
+	ft_putstr_fd(str, fd);
 }
