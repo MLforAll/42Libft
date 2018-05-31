@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/05/25 16:41:44 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/05/29 00:37:34 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -145,7 +145,8 @@ SRCFILES = get_next_line.c \
 	t_tab/ft_ttabdel.c \
 	file/get_name_from_path.c \
 	file/get_name_from_path_2.c \
-	file/get_basedir.c
+	file/get_basedir.c \
+	file/get_elem_path.c
 SRCS = $(addprefix $(SRCDIR)/, $(SRCFILES))
 
 NSRC = $(shell echo "$(SRCS)" | awk '{print NF}')
