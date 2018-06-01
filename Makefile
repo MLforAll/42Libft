@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/05/29 00:37:34 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/05/31 20:05:11 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ SRCFILES = get_next_line.c \
 	nbr/ft_nbrcpy.c \
 	nbr/ft_nbrcat.c \
 	nbr/ft_atoi.c \
+	nbr/ft_secatoi.c \
 	nbr/ft_itoa.c \
 	nbr/ft_lltoa.c \
 	print/ft_putchar.c \
