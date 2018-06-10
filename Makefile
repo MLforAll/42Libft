@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/05/31 20:05:11 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/06/10 02:46:10 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ SRCFILES = get_next_line.c \
 	list/ft_dlstpush.c \
 	list/ft_dlstdel.c \
 	list/ft_dlstdelone.c \
+	list/ft_dlstlen.c \
 	btree/ft_btnew.c \
 	btree/ft_btattach.c \
 	btree/ft_btdelone.c \
@@ -63,6 +64,8 @@ SRCFILES = get_next_line.c \
 	print/ft_putendl_color.c \
 	print/ft_putendl_color_fd.c \
 	print/ft_putendl_fd.c \
+	print/ft_putendlsec.c \
+	print/ft_putendlsec_fd.c \
 	print/ft_putlst.c \
 	print/ft_putlst_fd.c \
 	print/ft_putnbr.c \
@@ -70,6 +73,8 @@ SRCFILES = get_next_line.c \
 	print/ft_putnbrl.c \
 	print/ft_putnbrl_fd.c \
 	print/ft_putstr.c \
+	print/ft_putstrsec.c \
+	print/ft_putstrsec_fd.c \
 	print/ft_putstr_color.c \
 	print/ft_putstr_color_fd.c \
 	print/ft_putstr_fd.c \
