@@ -6,13 +6,13 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/06/14 02:38:52 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/06/14 05:07:57 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CFLAGS = -Wall -Werror -Wextra -Weverything
+CFLAGS = -Wall -Werror -Wextra
 
 SRCDIR = srcs
 SRCFILES = get_next_line.c \
