@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 13:44:11 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/11 15:44:27 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 03:18:27 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,29 @@
 
 char		*ft_strnstr(const char *big, const char *find, size_t len)
 {
-	int		i;
-	size_t	p;
-	int		start;
+	unsigned long	i;
+	size_t			p;
+	unsigned long	start;
 
-	i = -1;
+	i = 0;
 	p = 0;
+	start = 0;
 	if (!find[0])
-		return ((char*)big);
-	while (big[++i] && (size_t)i < len)
+		return ((char*)((uintptr_t)big));
+	while (big[i] && (size_t)i < len)
 	{
 		if (big[i] == find[p])
 		{
-			if (p++ == 0)
-				start = i;
-			if (p == ft_strlen((char*)find))
-				return ((char*)&big[start]);
+			(p++ == 0) ? start = i : 0;
+			if (p == ft_strlen(find))
+				return ((char*)((uintptr_t)big + start));
 		}
 		else
 		{
-			if (p > 0)
-				i = start;
+			(p > 0) ? i = start : 0;
 			p = 0;
 		}
+		++i;
 	}
 	return (NULL);
 }

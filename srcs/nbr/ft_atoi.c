@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 16:29:26 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/11 15:36:15 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 03:07:02 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ int				ft_atoi(const char *str)
 		ret = ret * 10 + str[i] - '0';
 	if (neg)
 		ret = -ret;
-	return (ret);
+	return ((int)ret);
 }

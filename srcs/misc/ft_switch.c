@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/28 08:15:12 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/04/29 18:54:25 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 03:13:05 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,18 @@ int		ft_switch(void *dataref,
 				size_t tablelen,
 				int (*cmp)(void *, void *))
 {
-	void			*dt;
-	unsigned char	*addr;
+	void	*dt;
+	void	*adr;
 
-	while (*(unsigned char**)(tableref + tablelen - sizeof(void*) * 2))
+	while (*(void**)((uintptr_t)tableref + tablelen - sizeof(void*) * 2))
 	{
 		if (cmp(dataref, tableref))
 		{
-			dt = (void*)*(unsigned char**)(tableref + tablelen - sizeof(void*));
-			addr = *(unsigned char**)(tableref + tablelen - sizeof(void*) * 2);
-			return (((int (*)(void *))addr)(dt));
+			dt = *(void**)((uintptr_t)tableref + tablelen - sizeof(void*));
+			adr = *(void**)((uintptr_t)tableref + tablelen - sizeof(void*) * 2);
+			return (((int (*)(void *))adr)(dt));
 		}
-		tableref += tablelen;
+		tableref = (void*)((uintptr_t)tableref + tablelen);
 	}
 	return (FALSE);
 }

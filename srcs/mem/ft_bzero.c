@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 19:19:44 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/09 19:40:01 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 02:43:25 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ void	ft_bzero(void *s, size_t n)
 	size_t			i;
 
 	sc = (unsigned char*)s;
-	i = -1;
-	while (++i < n)
+	i = 0;
+	while (i < n)
+	{
 		sc[i] = 0;
+		i++;
+	}
 }

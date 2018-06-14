@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 20:35:26 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/21 20:35:55 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 03:44:57 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*get_basedir(const char *f_path)
 		return (NULL);
 	if (!(rchr_ret = ft_strrchr(f_path, '/')))
 		return (ft_strdup("."));
-	if ((ret_len = rchr_ret - f_path) == 0)
+	if ((ret_len = (unsigned long)rchr_ret - (unsigned long)f_path) == 0)
 		ret_len = 1;
 	if (!(ret = ft_strnew(ret_len)))
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 11:11:04 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/11 15:31:49 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 03:14:03 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *s, int c)
 	while (1)
 	{
 		if (s[i] == c)
-			return ((char*)&s[i]);
+			return ((char*)((uintptr_t)s + i));
 		if (!s[i])
 			break ;
 		i++;

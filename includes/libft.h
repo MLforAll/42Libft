@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/21 20:35:01 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 04:26:59 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,8 @@ typedef struct	s_size
 
 typedef struct	s_point
 {
-	unsigned int	x;
-	unsigned int	y;
+	unsigned long	x;
+	unsigned long	y;
 }				t_point;
 
 #endif

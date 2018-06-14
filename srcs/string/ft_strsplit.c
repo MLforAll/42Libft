@@ -6,18 +6,18 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:53:54 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/12/08 16:46:10 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 03:22:02 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static int		word_cnt(char const *s, char c)
+static unsigned long	word_cnt(char const *s, char c)
 {
-	int		ret;
-	int		notc;
-	int		i;
+	unsigned long	ret;
+	unsigned long	notc;
+	unsigned long	i;
 
 	ret = 0;
 	i = 0;
@@ -40,10 +40,10 @@ static void		*freeretnull(char ***tab)
 
 char			**ft_strsplit(char const *s, char c)
 {
-	int		i;
-	int		p;
-	int		r;
-	char	**ret;
+	unsigned int	i;
+	unsigned int	p;
+	unsigned long	r;
+	char			**ret;
 
 	if (!s || !(ret = (char**)malloc(sizeof(char*) * (word_cnt(s, c) + 1))))
 		return (NULL);

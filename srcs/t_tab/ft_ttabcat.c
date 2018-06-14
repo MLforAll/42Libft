@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 01:59:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/19 02:28:07 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 03:32:58 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ void	ft_ttabcat(t_tab *mtab, void *ntab, size_t size)
 		free(mtab->data);
 		mtab->data = newdat;
 	}
-	ft_memcpy(mtab->data + mtab->oc_size, ntab, size);
+	ft_memcpy((void*)((uintptr_t)mtab->data + mtab->oc_size), ntab, size);
 	mtab->oc_size += size;
 }

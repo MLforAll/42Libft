@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/29 04:11:55 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 03:56:04 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,9 @@ int				ft_strisnumeric(char *s);
 char			*ft_strmulti(char *fmt, ...);
 char			**ft_strsplitline(char const *s);
 char			*ft_strrmc(char *s, char c);
-char			*ft_strstart(char *s, char *check);
+const char		*ft_strstart(const char *s, const char *check);
 char			*ft_strdiff(char *base, char *check);
 
-char			*get_last_component(const char *str, char c);
+const char		*get_last_component(const char *str, char c);
 
 #endif

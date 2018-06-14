@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 13:25:44 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/27 19:37:54 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 03:09:02 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_readfd(int fd, size_t buff_size)
 	char	sbuff[513];
 	char	*dbuff;
 	char	*bptr;
-	int		rbytes;
+	ssize_t	rbytes;
 
 	dbuff = NULL;
 	if (!(ret = ft_strnew(0))

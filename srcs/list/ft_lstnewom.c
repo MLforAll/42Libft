@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:01:52 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/19 11:48:58 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 02:57:16 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_list	*ft_lstnewom(const void *content, size_t content_size)
 		return (NULL);
 	if (content)
 	{
-		lst->content = (void*)lst + sizeof(t_list);
+		lst->content = (void*)((uintptr_t)lst + sizeof(t_list));
 		ft_memcpy(lst->content, content, content_size);
 		lst->content_size = content_size;
 	}

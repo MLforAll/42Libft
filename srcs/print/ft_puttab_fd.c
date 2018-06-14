@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 21:29:18 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/02/14 06:46:29 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 03:08:04 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_puttab_fd(char **tab, char *tabname, int outfd)
 {
-	unsigned int	i;
+	int		i;
 
 	if (!tab)
 		return ;
