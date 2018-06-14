@@ -6,14 +6,14 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/08 00:52:02 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/08 01:03:43 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 09:29:58 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int		ft_tstrcat(t_str *mstr, char *add)
+int		ft_tstrcat(t_str *mstr, const char *add)
 {
 	size_t	addlen;
 	size_t	goal;

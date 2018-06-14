@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/08 00:42:41 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/08 01:02:31 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 09:30:12 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ typedef struct	s_str
 
 t_str	ft_tstrnew(void);
 void	ft_tstrdel(t_str *mstr);
-int		ft_tstrcat(t_str *mstr, char *add);
-int		ft_tstrcpy(t_str *mstr, char *add);
+int		ft_tstrcat(t_str *mstr, const char *add);
+int		ft_tstrcpy(t_str *mstr, const char *add);
 
 #endif
