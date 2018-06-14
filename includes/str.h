@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/14 03:56:04 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 05:16:30 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ char			**ft_strsplit(char const *s, char c);
 
 unsigned int	ft_strcmpi(const char *s1, const char *s2);
 char			*ft_strnjoin(char const *s1, char const *s2, size_t len);
-int				ft_stradd(char **str, char *add);
-int				ft_strnadd(char **str, char *add, size_t len);
+int				ft_stradd(char **str, const char *add);
+int				ft_strnadd(char **str, const char *add, size_t len);
 int				ft_strisnumeric(char *s);
 char			*ft_strmulti(char *fmt, ...);
 char			**ft_strsplitline(char const *s);

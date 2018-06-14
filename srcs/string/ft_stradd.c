@@ -6,14 +6,14 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 20:42:58 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/29 00:27:10 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/14 05:16:05 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int		ft_stradd(char **str, char *add)
+int		ft_stradd(char **str, const char *add)
 {
 	char	*tmp;
 
