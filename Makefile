@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/06/14 05:07:57 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/06/19 06:26:31 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRCFILES = get_next_line.c \
 	mem/ft_memset.c \
 	list/ft_lstnew.c \
 	list/ft_lstnewom.c \
+	list/ft_lstnew_nomalloc.c \
 	list/ft_lstadd.c \
 	list/ft_lstpush.c \
 	list/ft_lstdel.c \
