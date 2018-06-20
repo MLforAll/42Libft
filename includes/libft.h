@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/18 23:48:01 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/20 03:42:36 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,20 +66,28 @@
 ** size struct (width/height)
 */
 
-typedef struct	s_size
+typedef struct		s_size
 {
-	size_t			width;
-	size_t			height;
-}				t_size;
+	size_t		width;
+	size_t		height;
+}					t_size;
 
 /*
 ** pt struct (x/y -- same as t_size)
 */
 
-typedef struct	s_point
+typedef struct		s_point32
+{
+	unsigned int	x;
+	unsigned int	y;
+}					t_point32;
+
+typedef struct		s_point64
 {
 	unsigned long	x;
 	unsigned long	y;
-}				t_point;
+}					t_point64;
+
+typedef t_point64	t_point;
 
 #endif
