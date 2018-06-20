@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 18:35:01 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/20 03:40:33 by kdumarai         ###   ########.fr       */
+/*   Created: 2017/11/06 19:24:21 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/06/20 02:45:46 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
+#include <stdlib.h>
 
-void	ft_putchar_fd(char c, int fd)
+char	*ft_strndup(const char *s1, size_t len)
 {
-	(void)write(fd, &c, 1);
+	char	*ret;
+
+	if (!(ret = (char*)malloc(sizeof(char) * (len + 1))))
+		return (NULL);
+	ft_strncpy(ret, s1, len);
+	return (ret);
 }

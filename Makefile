@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/06/19 06:26:31 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/06/20 02:45:29 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,6 +97,7 @@ SRCFILES = get_next_line.c \
 	string/ft_strcpy.c \
 	string/ft_strdel.c \
 	string/ft_strdup.c \
+	string/ft_strndup.c \
 	string/ft_strequ.c \
 	string/ft_striter.c \
 	string/ft_striteri.c \

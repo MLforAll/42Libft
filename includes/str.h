@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/14 05:16:30 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/20 02:46:30 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ char			*ft_strcat(char *s1, const char *s2);
 char			*ft_strncat(char *s1, const char *s2, size_t len);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 char			*ft_strdup(const char *s1);
+char			*ft_strndup(const char *s1, size_t len);
 char			*ft_strstr(const char *big, const char *find);
 char			*ft_strnstr(const char *big, const char *find, size_t len);
 int				ft_strcmp(const char *s1, const char *s2);
