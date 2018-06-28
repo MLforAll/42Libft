@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 01:59:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/27 00:00:48 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/28 18:26:29 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 void	ft_ttabcat(t_tab *mtab, void *ntab, size_t size)
 {
 	void	*newdat;
-	void	*dest;
 
 	if (mtab->oc_size + size > mtab->bufflen)
 	{
@@ -26,7 +25,6 @@ void	ft_ttabcat(t_tab *mtab, void *ntab, size_t size)
 		free(mtab->data);
 		mtab->data = newdat;
 	}
-	dest = (void*)((uintptr_t)mtab->data + mtab->oc_size);
-	ft_memcpy(dest, ntab, size);
+	ft_memcpy((void*)((uintptr_t)mtab->data + mtab->oc_size), ntab, size);
 	mtab->oc_size += size;
 }
