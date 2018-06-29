@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/20 03:42:36 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/29 03:35:54 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 # define LIBFT_H
 
 # include <string.h>
-# include <stdint.h>
+# include <stddef.h>
+
+# include "ft_types.h"
 
 # include "mem.h"
 # include "str.h"
@@ -89,5 +91,15 @@ typedef struct		s_point64
 }					t_point64;
 
 typedef t_point64	t_point;
+
+/*
+** bool type
+*/
+
+typedef enum		e_bool
+{
+	kTrue,
+	kFalse
+}					t_bool;
 
 #endif

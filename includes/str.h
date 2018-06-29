@@ -6,12 +6,14 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/20 02:46:30 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/06/29 02:10:56 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STR_H
 # define STR_H
+
+# include <string.h>
 
 size_t			ft_strlen(const char *str);
 size_t			ft_strclen(const char *str, char c);
@@ -54,7 +56,7 @@ char			*ft_strmulti(char *fmt, ...);
 char			**ft_strsplitline(char const *s);
 char			*ft_strrmc(char *s, char c);
 const char		*ft_strstart(const char *s, const char *check);
-char			*ft_strdiff(char *base, char *check);
+char			*ft_strdiff(char *base, const char *check);
 
 const char		*get_last_component(const char *str, char c);
 
