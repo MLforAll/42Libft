@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 04:30:47 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/28 23:05:48 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/03 05:25:44 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,3 @@ char	*ft_strpbrk(const char *s, const char *charset)
 	}
 	return (NULL);
 }
-

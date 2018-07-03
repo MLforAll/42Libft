@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 20:35:26 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/14 03:44:57 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/03 05:26:08 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ char	*get_basedir(const char *f_path)
 	ft_strncpy(ret, f_path, ret_len);
 	return (ret);
 }
-

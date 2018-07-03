@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/08 00:42:41 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/03 00:39:02 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/03 05:24:13 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ typedef struct	s_tab
 ** t_tab data type functions
 */
 
-t_tab	ft_ttabnew(size_t data_size);
-t_uint8	ft_ttabcat(t_tab *mtab, void *ntab, size_t nb);
-void	ft_ttabdel(t_tab *mtab);
+t_tab			ft_ttabnew(size_t data_size);
+t_uint8			ft_ttabcat(t_tab *mtab, void *ntab, size_t nb);
+void			ft_ttabdel(t_tab *mtab);
 
 #endif

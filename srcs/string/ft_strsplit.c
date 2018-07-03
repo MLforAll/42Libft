@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:53:54 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/14 03:22:02 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/03 05:25:01 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,13 @@ static unsigned long	word_cnt(char const *s, char c)
 	return (ret + 1);
 }
 
-static void		*freeretnull(char ***tab)
+static void				*freeretnull(char ***tab)
 {
 	ft_tabfree(tab);
 	return (NULL);
 }
 
-char			**ft_strsplit(char const *s, char c)
+char					**ft_strsplit(char const *s, char c)
 {
 	unsigned int	i;
 	unsigned int	p;

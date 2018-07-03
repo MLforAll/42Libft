@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:57:00 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/14 02:55:57 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/03 05:23:37 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	const unsigned char	*srcc;
-	unsigned char	*dstc;
-	size_t			i;
+	unsigned char		*dstc;
+	size_t				i;
 
 	srcc = (const unsigned char*)src;
 	dstc = (unsigned char*)dst;
