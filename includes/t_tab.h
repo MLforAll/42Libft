@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/08 00:42:41 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/19 02:20:27 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/03 00:39:02 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ typedef struct	s_tab
 {
 	void	*data;
 	size_t	data_size;
+	size_t	count;
 	size_t	oc_size;
-	size_t	bufflen;
+	size_t	buff_size;
 }				t_tab;
 
 /*
@@ -32,7 +33,7 @@ typedef struct	s_tab
 */
 
 t_tab	ft_ttabnew(size_t data_size);
-void	ft_ttabcat(t_tab *mtab, void *ntab, size_t size);
+t_uint8	ft_ttabcat(t_tab *mtab, void *ntab, size_t nb);
 void	ft_ttabdel(t_tab *mtab);
 
 #endif

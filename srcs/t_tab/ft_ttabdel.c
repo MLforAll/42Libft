@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 02:12:14 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/19 02:19:59 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/03 00:41:44 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,5 @@
 void	ft_ttabdel(t_tab *mtab)
 {
 	free(mtab->data);
-	mtab->data = NULL;
 	ft_bzero(mtab, sizeof(t_tab));
 }

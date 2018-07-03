@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/08 00:42:41 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/21 18:05:55 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/03 04:40:16 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ t_str	ft_tstrnew(void);
 void	ft_tstrdel(t_str *vstr);
 void	ft_tstrclr(t_str *vstr);
 int		ft_tstrcat(t_str *vstr, const char *add);
+int		ft_tstrncat(t_str *vstr, const char *add, ssize_t len);
 int		ft_tstrcpy(t_str *vstr, const char *add);
+int		ft_tstrncpy(t_str *vstr, const char *add, ssize_t len);
 
 #endif
