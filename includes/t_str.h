@@ -6,12 +6,14 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/08 00:42:41 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/03 05:24:06 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/04 02:52:10 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef T_STR_H
 # define T_STR_H
+
+# include <string.h>
 
 # define VSTR_DEFAULT_BUFFLEN	10
 

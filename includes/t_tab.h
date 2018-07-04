@@ -6,12 +6,15 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/08 00:42:41 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/03 05:24:13 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/04 02:49:58 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef T_TAB_H
 # define T_TAB_H
+
+# include <string.h>
+# include "ft_types.h"
 
 # define MTAB_DEFAULT_BUFFLEN	10
 
@@ -34,6 +37,6 @@ typedef struct	s_tab
 
 t_tab			ft_ttabnew(size_t data_size);
 t_uint8			ft_ttabcat(t_tab *mtab, void *ntab, size_t nb);
-void			ft_ttabdel(t_tab *mtab);
+void			ft_ttabdel(t_tab *mtab, void (*delf)(void *, size_t));
 
 #endif

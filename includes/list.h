@@ -6,12 +6,14 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/19 06:26:14 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/04 02:51:12 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIST_H
 # define LIST_H
+
+# include <string.h>
 
 /*
 ** t_list def

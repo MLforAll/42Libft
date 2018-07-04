@@ -6,12 +6,14 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/03 05:24:19 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/04 02:50:14 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BTREE_H
 # define BTREE_H
+
+# include <string.h>
 
 typedef struct	s_btree
 {

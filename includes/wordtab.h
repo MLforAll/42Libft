@@ -6,12 +6,14 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/05/12 01:54:35 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/04 02:52:33 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WORDTAB_H
 # define WORDTAB_H
+
+# include <string.h>
 
 char	**ft_tabnew(void);
 void	ft_puttab(char **tab, char *tabname);
