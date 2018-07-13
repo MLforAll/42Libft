@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/07/03 04:57:04 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/07/13 03:36:43 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ INCFILES = libft.h \
 			btree.h \
 			char.h \
 			file.h \
-			ft_types.h \
+			ft_int.h \
 			get_next_line.h \
 			list.h \
 			mem.h \

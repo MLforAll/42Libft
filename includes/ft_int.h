@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_types.h                                         :+:      :+:    :+:   */
+/*   ft_int.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/28 23:09:03 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/28 23:10:59 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/13 03:36:06 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_TYPES_H
-# define FT_TYPES_H
+#ifndef FT_INT_H
+# define FT_INT_H
 
 # include <stddef.h>
 
@@ -42,5 +42,11 @@ typedef long			t_int64;
 
 typedef ptrdiff_t		t_uintptr;
 typedef t_int64			t_intptr;
+
+/*
+** characters
+*/
+
+typedef int				t_wchar;
 
 #endif

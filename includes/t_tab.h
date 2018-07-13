@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/08 00:42:41 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/04 02:49:58 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/13 03:37:24 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define T_TAB_H
 
 # include <string.h>
-# include "ft_types.h"
+# include "ft_int.h"
 
 # define MTAB_DEFAULT_BUFFLEN	10
 

@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/29 03:35:54 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/13 03:36:14 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <string.h>
 # include <stddef.h>
 
-# include "ft_types.h"
+# include "ft_int.h"
 
 # include "mem.h"
 # include "str.h"
