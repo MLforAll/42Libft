@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/07/13 03:36:43 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/07/13 05:17:18 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -170,6 +170,7 @@ SRCFILES = get_next_line.c \
 	t_str/ft_tstrdel.c \
 	t_str/ft_tstrclr.c \
 	t_str/ft_tstrcpy.c \
+	t_str/ft_tstr_cpycore.c \
 	t_str/ft_tstrncpy.c \
 	t_str/ft_tstrcat.c \
 	t_str/ft_tstrncat.c \

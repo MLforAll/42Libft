@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tstrcpy.c                                       :+:      :+:    :+:   */
+/*   ft_tstr_cpycore.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/08 00:46:42 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/13 05:02:47 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/07/13 05:13:41 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/07/13 05:18:31 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_TSTR_CPYCORE_H
+# define FT_TSTR_CPYCORE_H
 
-int		ft_tstrcpy(t_str *vstr, const char *add)
-{
-	return (ft_tstrncpy(vstr, add, -1));
-}
+# include "libft.h"
+
+int		ft_tstr_cpycore(t_str *vstr, const char *add);
+
+#endif

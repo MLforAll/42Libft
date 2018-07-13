@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 02:12:14 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/04 02:48:50 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/13 05:25:09 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_ttabdel(t_tab *mtab, void (*delf)(void *, size_t))
 		free(mtab->data);
 	else
 	{
-		idx = mtab->count;;
+		idx = mtab->count;
 		while (idx--)
 			delf((void*)((ptrdiff_t)mtab->data + idx * mtab->data_size),
 				mtab->data_size);
