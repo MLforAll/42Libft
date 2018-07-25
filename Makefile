@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/07/13 05:17:18 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/07/25 04:08:58 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,7 @@ SRCFILES = get_next_line.c \
 	list/ft_lstmergesort.c \
 	list/ft_lstinssort.c \
 	list/ft_ltot.c \
+	list/ft_lstnodefree.c \
 	list/ft_dlstnew.c \
 	list/ft_dlstadd.c \
 	list/ft_dlstpush.c \
@@ -138,6 +139,7 @@ SRCFILES = get_next_line.c \
 	string/ft_strncpy.c \
 	string/ft_strnequ.c \
 	string/ft_strnew.c \
+	string/ft_strnew_replace.c \
 	string/ft_strnstr.c \
 	string/ft_strrchr.c \
 	string/ft_strstart.c \
@@ -167,6 +169,7 @@ SRCFILES = get_next_line.c \
 	wordtab/ft_tablen.c \
 	wordtab/ft_tabsort.c \
 	t_str/ft_tstrnew.c \
+	t_str/ft_tstrnew_cpy.c \
 	t_str/ft_tstrdel.c \
 	t_str/ft_tstrclr.c \
 	t_str/ft_tstrcpy.c \
@@ -175,6 +178,7 @@ SRCFILES = get_next_line.c \
 	t_str/ft_tstrcat.c \
 	t_str/ft_tstrncat.c \
 	t_tab/ft_ttabnew.c \
+	t_tab/ft_ttabnew_cpy.c \
 	t_tab/ft_ttabcat.c \
 	t_tab/ft_ttabdel.c \
 	file/get_name_from_path.c \

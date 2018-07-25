@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/04 02:51:12 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/23 20:10:26 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,11 @@ void			ft_dlstpush(t_dlist **alst, t_dlist *add);
 void			ft_dlstdelone(t_dlist **alst, void (*del)(void *, size_t));
 void			ft_dlstdel(t_dlist **alst, void (*del)(void *, size_t));
 size_t			ft_dlstlen(t_dlist *lst);
+
+/*
+** utilities
+*/
+
+void			ft_lstnodefree(void *data, size_t datsize);
 
 #endif

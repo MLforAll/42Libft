@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/29 02:10:56 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/24 23:50:31 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <string.h>
 
-size_t			ft_strlen(const char *str);
+size_t	ft_strlen(const char *str);
 size_t			ft_strclen(const char *str, char c);
 
 char			*ft_strchr(const char *s, int c);
@@ -46,6 +46,10 @@ char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
+
+char			*ft_strnew_replace(const char *s,
+								const char *find,
+								const char *repl);
 
 unsigned int	ft_strcmpi(const char *s1, const char *s2);
 char			*ft_strnjoin(char const *s1, char const *s2, size_t len);

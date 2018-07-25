@@ -6,17 +6,16 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/08 00:43:45 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/21 18:05:34 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/25 04:08:10 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_str	ft_tstrnew(void)
+t_uint8		ft_tstrnew(t_str *vstr)
 {
-	t_str	ret;
-
-	ret.s = ft_strnew(VSTR_DEFAULT_BUFFLEN);
-	ret.bufflen = VSTR_DEFAULT_BUFFLEN;
-	return (ret);
+	vstr->s = ft_strnew(VSTR_DEFAULT_BUFFLEN);
+	vstr->len = 0;
+	vstr->bufflen = (vstr->s) ? VSTR_DEFAULT_BUFFLEN : 0;
+	return ((vstr->s != NULL));
 }
