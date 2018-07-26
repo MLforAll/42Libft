@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/07/25 04:08:58 by kdumarai         ###   ########.fr        #
+#    Updated: 2018/07/27 00:01:14 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -111,6 +111,7 @@ SRCFILES = get_next_line.c \
 	misc/ft_returnmsg.c \
 	misc/ft_isatty.c \
 	misc/ft_switch.c \
+	misc/ft_args_opts.c \
 	string/ft_strcat.c \
 	string/ft_strchr.c \
 	string/ft_strpbrk.c \
