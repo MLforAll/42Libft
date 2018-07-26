@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/26 17:42:10 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/26 22:21:49 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 
 # include <string.h>
 
-# define STRREPL_VS	1
-
-size_t	ft_strlen(const char *str);
+size_t			ft_strlen(const char *str);
 size_t			ft_strclen(const char *str, char c);
 
 char			*ft_strchr(const char *s, int c);
