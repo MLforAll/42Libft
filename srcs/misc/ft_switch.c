@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/28 08:15:12 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/04 02:54:11 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/27 04:59:12 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		ft_switch(void *dataref,
 				void *tableref,
 				size_t tablelen,
-				int (*cmp)(void *, void *))
+				int (*cmp)(const void *, const void *))
 {
 	void	*dt;
 	void	*adr;
