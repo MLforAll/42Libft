@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tablen.c                                        :+:      :+:    :+:   */
+/*   ft_strchrf.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/11 21:51:55 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/29 14:47:31 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/07/28 17:44:56 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/07/28 17:45:04 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_tablen(char **tab)
+int		ft_strchrf(const char *s, char c)
 {
-	size_t	ret;
+	unsigned long	last;
+	unsigned long	idx;
 
-	if (!tab)
-		return (0);
-	ret = 0;
-	while (tab[ret])
-		ret++;
-	return (ret);
+	idx = 0;
+	last = 0;
+	while (s[idx])
+	{
+		if (s[idx] == c && idx == last + 1)
+			return (TRUE);
+		if (s[idx] == c)
+			last = idx;
+		idx++;
+	}
+	return (FALSE);
 }

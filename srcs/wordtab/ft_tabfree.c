@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 16:06:27 by kdumarai          #+#    #+#             */
-/*   Updated: 2017/11/20 14:27:25 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/29 06:24:43 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_tabfree(char ***tab)
 {
 	size_t	i;
 
+	if (!tab || !*tab)
+		return ;
 	i = 0;
 	while ((*tab)[i])
 	{

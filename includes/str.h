@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/26 22:21:49 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/28 17:45:58 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,8 @@ char			*ft_strnew_replace(const char *s,
 								const char *find,
 								const char *repl);
 
-unsigned int	ft_strcmpi(const char *s1, const char *s2);
+int				ft_strchrf(const char *s, char c);
+unsigned long	ft_strcmpi(const char *s1, const char *s2);
 char			*ft_strnjoin(char const *s1, char const *s2, size_t len);
 int				ft_stradd(char **str, const char *add);
 int				ft_strnadd(char **str, const char *add, size_t len);
