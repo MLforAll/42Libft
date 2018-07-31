@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/28 17:45:58 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/07/31 22:36:20 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define STR_H
 
 # include <string.h>
+
+# define STRREPL_VS	1
 
 size_t			ft_strlen(const char *str);
 size_t			ft_strclen(const char *str, char c);
@@ -46,6 +48,7 @@ char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
+char			**ft_strsplit_charset(char const *s, const char *charset);
 
 char			*ft_strnew_replace(const char *s,
 								const char *find,
@@ -58,7 +61,6 @@ int				ft_stradd(char **str, const char *add);
 int				ft_strnadd(char **str, const char *add, size_t len);
 int				ft_strisnumeric(char *s);
 char			*ft_strmulti(char *fmt, ...);
-char			**ft_strsplitline(char const *s);
 char			*ft_strrmc(char *s, char c);
 const char		*ft_strstart(const char *s, const char *check);
 char			*ft_strdiff(char *base, const char *check);
