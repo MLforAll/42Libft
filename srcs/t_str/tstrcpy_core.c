@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tstr_cpycore.h                                  :+:      :+:    :+:   */
+/*   tstrcpy_core.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/13 05:13:41 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/25 03:48:19 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/05/08 00:46:42 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/08/01 20:14:00 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_TSTR_CPYCORE_H
-# define FT_TSTR_CPYCORE_H
+#include "tstr_internal.h"
 
-# include "libft.h"
-
-int		ft_tstr_cpycore(t_str *vstr, size_t addlen);
-
-#endif
+int		tstrncpy_core(t_str *vstr, const char *add, ssize_t len)
+{
+	if (!add
+		|| !ft_tstr_cpycore(vstr, (len == -1) ? ft_strlen(add) : (size_t)len))
+		return (FALSE);
+	if (len == -1)
+		(void)ft_strcpy(vstr->s, add);
+	else
+		(void)ft_strncpy(vstr->s, add, (size_t)len);
+	vstr->len = ft_strlen(vstr->s);
+	return (TRUE);
+}

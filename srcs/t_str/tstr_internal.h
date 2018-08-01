@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tstrncat.c                                      :+:      :+:    :+:   */
+/*   tstr_internal.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/08 00:52:02 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/08/01 20:20:44 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/07/13 05:13:41 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/08/01 20:13:41 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "tstr_internal.h"
+#ifndef TSTR_INTERNAL_H
+# define TSTR_INTERNAL_H
 
-int		ft_tstrncat(t_str *vstr, const char *add, size_t len)
-{
-	return (tstrncat_core(vstr, add, (size_t)len));
-}
+# include "libft.h"
+
+int		tstrncat_core(t_str *vstr, const char *add, ssize_t len);
+int		tstrncpy_core(t_str *vstr, const char *add, ssize_t len);
+int		ft_tstr_cpycore(t_str *vstr, size_t addlen);
+
+#endif

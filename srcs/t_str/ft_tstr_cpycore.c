@@ -6,12 +6,12 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/13 05:03:39 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/27 06:23:46 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/08/01 20:14:19 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "ft_tstr_cpycore.h"
+#include "tstr_internal.h"
 
 inline int		ft_tstr_cpycore(t_str *vstr, size_t addlen)
 {
