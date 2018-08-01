@@ -23,7 +23,7 @@ void	ft_ttabdel(t_tab *mtab, void (*delf)(void *, size_t))
 	{
 		idx = mtab->count;
 		while (idx--)
-			delf((void*)((ptrdiff_t)mtab->data + idx * mtab->data_size),
+			delf((void*)((t_uintptr)mtab->data + idx * mtab->data_size),
 				mtab->data_size);
 	}
 	ft_bzero(mtab, sizeof(t_tab));

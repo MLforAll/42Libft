@@ -17,7 +17,7 @@ char	*ft_strpbrk(const char *s, const char *charset)
 	while (*s)
 	{
 		if (ft_strchr(charset, *s))
-			return ((char*)((ptrdiff_t)s));
+			return ((char*)((t_uintptr)s));
 		++s;
 	}
 	return (NULL);

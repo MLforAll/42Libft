@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/28 23:09:03 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/13 03:36:06 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/08/01 23:50:08 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ typedef long			t_int64;
 ** ptr
 */
 
-typedef ptrdiff_t		t_uintptr;
-typedef t_int64			t_intptr;
+typedef t_uint64		t_uintptr;
+typedef ptrdiff_t		t_intptr;
 
 /*
 ** characters

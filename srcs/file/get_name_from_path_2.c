@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 20:30:23 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/03 05:26:06 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/08/01 23:54:00 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ char	*get_name_from_path_2(const char *path)
 	tmp++;
 	if (!(chr = (const char*)ft_strchr(tmp, '/')))
 		return ((tmp) ? ft_strdup(tmp) : NULL);
-	len_to_slash = chr - tmp;
+	len_to_slash = (size_t)(chr - tmp);
 	return (ft_strsub(tmp, 0, len_to_slash));
 }

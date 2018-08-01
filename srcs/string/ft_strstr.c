@@ -22,14 +22,14 @@ char		*ft_strstr(const char *big, const char *find)
 	p = 0;
 	start = 0;
 	if (!find[0])
-		return ((char*)((ptrdiff_t)big));
+		return ((char*)((t_uintptr)big));
 	while (big[i])
 	{
 		if (big[i] == find[p])
 		{
 			(p++ == 0) ? start = i : 0;
 			if (p == ft_strlen(find))
-				return ((char*)((ptrdiff_t)big + start));
+				return ((char*)((t_uintptr)big + start));
 		}
 		else
 		{

@@ -36,7 +36,7 @@ t_uint8	ft_ttabcat(t_tab *mtab, void *ntab, size_t nb)
 		mtab->buff_size = new_size;
 	}
 	size = nb * mtab->data_size;
-	(void)ft_memcpy((void*)((ptrdiff_t)mtab->data + mtab->oc_size), ntab, size);
+	(void)ft_memcpy((void*)((t_uintptr)mtab->data + mtab->oc_size), ntab, size);
 	mtab->oc_size += size;
 	mtab->count += nb;
 	return (TRUE);

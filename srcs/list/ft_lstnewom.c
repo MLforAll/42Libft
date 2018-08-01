@@ -21,7 +21,7 @@ t_list	*ft_lstnewom(const void *content, size_t content_size)
 		return (NULL);
 	if (content)
 	{
-		lst->content = (void*)((ptrdiff_t)lst + sizeof(t_list));
+		lst->content = (void*)((t_uintptr)lst + sizeof(t_list));
 		ft_memcpy(lst->content, content, content_size);
 		lst->content_size = content_size;
 	}
