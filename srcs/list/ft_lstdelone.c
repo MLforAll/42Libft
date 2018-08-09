@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:05:18 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/08/09 15:02:26 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/08/09 21:44:29 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,5 @@ void	ft_lstdelone(t_list **alist, void (*del)(void *, size_t))
 	if (del)
 		del((*alist)->content, (*alist)->content_size);
 	free(*alist);
-	//*alist = NULL;
 	*alist = nxt;
 }

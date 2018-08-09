@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/13 05:03:39 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/08/01 20:14:19 by kdumarai         ###   ########.fr       */
+/*   Updated: 2018/08/09 21:42:31 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ inline int		ft_tstr_cpycore(t_str *vstr, size_t addlen)
 	size_t	goal;
 	char	*new_s;
 
-	if (addlen == 0 || vstr->bufflen == 0 || !vstr->s)
+	if (vstr->bufflen == 0 || !vstr->s)
 		return (FALSE);
+	if (addlen == 0)
+		return (TRUE);
 	if ((goal = vstr->len + addlen) > vstr->bufflen)
 	{
 		while (vstr->bufflen < goal)
