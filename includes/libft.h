@@ -31,6 +31,7 @@
 # include "misc.h"
 # include "file.h"
 # include "get_next_line.h"
+# include "viclucas.h"
 
 /*
 ** ANSI Colors

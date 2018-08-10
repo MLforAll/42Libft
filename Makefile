@@ -29,6 +29,7 @@ INCFILES = libft.h \
 			str.h \
 			t_str.h \
 			t_tab.h \
+			viclucas.h \
 			wordtab.h
 INCLUDES = $(addprefix $(INCDIR)/, $(INCFILES))
 
@@ -188,7 +189,14 @@ SRCFILES = get_next_line.c \
 	file/get_name_from_path.c \
 	file/get_name_from_path_2.c \
 	file/get_basedir.c \
-	file/get_elem_path.c
+	file/get_elem_path.c \
+	viclucas/ft_access.c \
+	viclucas/ft_error.c \
+	viclucas/ft_free_db_tab.c \
+	viclucas/ft_free_thoses.c \
+	viclucas/ft_quotes_check.c \
+	viclucas/ft_souder.c \
+	viclucas/print_db.c
 SRCS = $(addprefix $(SRCDIR)/, $(SRCFILES))
 
 NSRC = $(shell echo "$(SRCS)" | awk '{print NF}')
