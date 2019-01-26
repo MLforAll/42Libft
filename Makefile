@@ -6,14 +6,12 @@
 #    By: kelian <kelian@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2019/01/26 22:36:01 by kelian           ###   ########.fr        #
+#    Updated: 2019/01/26 22:49:05 by kelian           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 MINNAME = libftmin.a
-LIBCUSTOMNAME = libft_custom.a
-LIBCNAME = libft_libc.a
 
 CFLAGS = -Wall -Werror -Wextra
 
@@ -199,6 +197,9 @@ OBJDIR = objs
 OBJS = $(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 LIBCOBJS = $(LIBCSRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
+LIBCUSTOMNAME = $(OBJDIR)/libft_custom.a
+LIBCNAME = $(OBJDIR)/libft_libc.a
+
 ifeq ($(shell which bc >/dev/null && which awk >/dev/null && echo true),true)
 	CUSTOMNSRC = $(shell echo "$(SRCS)" | awk '{print NF}')
 	LIBCNSRC = $(shell echo "$(LIBCSRCS)" | awk '{print NF}')
@@ -225,7 +226,6 @@ $(NAME): $(LIBCNAME) $(LIBCUSTOMNAME)
 	@ printf "\033[K$(PROJTEXT)Compiling\n"
 	@ printf "$(PROJTEXT)Linking\n"
 	@ libtool $? -o $@
-	@ rm -f $?
 	@ printf "$(PROJTEXT)\033[1;32mLib built at $@\033[0;39m\n"
 
 $(LIBCNAME): $(LIBCOBJS) $(INCLUDES)
