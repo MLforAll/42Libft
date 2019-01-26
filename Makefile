@@ -3,21 +3,24 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
+#    By: kelian <kelian@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2018/08/01 23:54:27 by kdumarai         ###   ########.fr        #
+#    Updated: 2019/01/26 22:36:01 by kelian           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+MINNAME = libftmin.a
+LIBCUSTOMNAME = libft_custom.a
+LIBCNAME = libft_libc.a
 
 CFLAGS = -Wall -Werror -Wextra
 
 INCDIR = includes
 INCFILES = libft.h \
 			btree.h \
-			char.h \
+			libc.h \
 			file.h \
 			ft_int.h \
 			get_next_line.h \
@@ -33,16 +36,42 @@ INCFILES = libft.h \
 INCLUDES = $(addprefix $(INCDIR)/, $(INCFILES))
 
 SRCDIR = srcs
-SRCFILES = get_next_line.c \
-	mem/ft_bzero.c \
+LIBCSRCFILES = libc/ft_strnstr.c \
+	libc/ft_strcat.c \
+	libc/ft_strlen.c \
+	libc/ft_strchr.c \
+	libc/ft_strpbrk.c \
+	libc/ft_strcmp.c \
+	libc/ft_strdup.c \
+	libc/ft_strcpy.c \
+	libc/ft_strndup.c \
+	libc/ft_strlcat.c \
+	libc/ft_bzero.c \
+	libc/ft_strncat.c \
+	libc/ft_atoi.c \
+	libc/ft_memccpy.c \
+	libc/ft_memchr.c \
+	libc/ft_memcmp.c \
+	libc/ft_memcpy.c \
+	libc/ft_strncmp.c \
+	libc/ft_memmove.c \
+	libc/ft_memset.c \
+	libc/ft_strncpy.c \
+	libc/ft_strrchr.c \
+	libc/ft_strstr.c \
+	libc/ft_tolower.c \
+	libc/ft_toupper.c \
+	libc/ft_isalnum.c \
+	libc/ft_isalpha.c \
+	libc/ft_isascii.c \
+	libc/ft_isdigit.c \
+	libc/ft_islower.c \
+	libc/ft_isprint.c \
+	libc/ft_isupper.c
+LIBCSRCS = $(addprefix $(SRCDIR)/, $(LIBCSRCFILES))
+SRCFILES = misc/get_next_line.c \
 	mem/ft_memalloc.c \
-	mem/ft_memccpy.c \
-	mem/ft_memchr.c \
-	mem/ft_memcmp.c \
-	mem/ft_memcpy.c \
 	mem/ft_memdel.c \
-	mem/ft_memmove.c \
-	mem/ft_memset.c \
 	list/ft_lstnew.c \
 	list/ft_lstnewom.c \
 	list/ft_lstnew_nomalloc.c \
@@ -70,11 +99,10 @@ SRCFILES = get_next_line.c \
 	btree/ft_btdel.c \
 	nbr/ft_nbrlen.c \
 	nbr/ft_nbrlen_base.c \
+	nbr/ft_itoa.c \
 	nbr/ft_nbrcpy.c \
 	nbr/ft_nbrcat.c \
-	nbr/ft_atoi.c \
 	nbr/ft_secatoi.c \
-	nbr/ft_itoa.c \
 	nbr/ft_lltoa.c \
 	print/ft_putchar.c \
 	print/ft_putchar_fd.c \
@@ -112,17 +140,10 @@ SRCFILES = get_next_line.c \
 	misc/ft_isatty.c \
 	misc/ft_switch.c \
 	misc/ft_args_opts.c \
-	string/ft_strcat.c \
-	string/ft_strchr.c \
-	string/ft_strpbrk.c \
 	string/ft_strclr.c \
 	string/ft_strcmpi.c \
 	string/ft_strchrf.c \
-	string/ft_strcmp.c \
-	string/ft_strcpy.c \
 	string/ft_strdel.c \
-	string/ft_strdup.c \
-	string/ft_strndup.c \
 	string/ft_strequ.c \
 	string/ft_striter.c \
 	string/ft_striteri.c \
@@ -131,37 +152,20 @@ SRCFILES = get_next_line.c \
 	string/ft_stradd.c \
 	string/ft_strnadd.c \
 	string/ft_strisnumeric.c \
-	string/ft_strlcat.c \
-	string/ft_strlen.c \
 	string/ft_strclen.c \
 	string/ft_strmap.c \
 	string/ft_strmapi.c \
-	string/ft_strncat.c \
-	string/ft_strncmp.c \
-	string/ft_strncpy.c \
 	string/ft_strnequ.c \
 	string/ft_strnew.c \
 	string/ft_strnew_replace.c \
-	string/ft_strnstr.c \
-	string/ft_strrchr.c \
 	string/ft_strstart.c \
 	string/ft_strdiff.c \
 	string/ft_strsplit.c \
 	string/ft_strsplit_charset.c \
 	string/ft_strrmc.c \
-	string/ft_strstr.c \
 	string/ft_strsub.c \
 	string/ft_strtrim.c \
 	string/get_last_component.c \
-	char/ft_tolower.c \
-	char/ft_toupper.c \
-	char/ft_isalnum.c \
-	char/ft_isalpha.c \
-	char/ft_isascii.c \
-	char/ft_isdigit.c \
-	char/ft_islower.c \
-	char/ft_isprint.c \
-	char/ft_isupper.c \
 	wordtab/ft_tabnew.c \
 	wordtab/ft_tabfree.c \
 	wordtab/ft_tabjoin.c \
@@ -191,25 +195,46 @@ SRCFILES = get_next_line.c \
 	file/get_elem_path.c
 SRCS = $(addprefix $(SRCDIR)/, $(SRCFILES))
 
-NSRC = $(shell echo "$(SRCS)" | awk '{print NF}')
-ifeq ($(shell [ ! -z "`which bc`" ] && [ ! -z "`which awk`" ] && echo true),true)
+OBJDIR = objs
+OBJS = $(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
+LIBCOBJS = $(LIBCSRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
+
+ifeq ($(shell which bc >/dev/null && which awk >/dev/null && echo true),true)
+	CUSTOMNSRC = $(shell echo "$(SRCS)" | awk '{print NF}')
+	LIBCNSRC = $(shell echo "$(LIBCSRCS)" | awk '{print NF}')
+	NSRC = $(shell echo "$(CUSTOMNSRC) + $(LIBCNSRC)" | bc)
 	CSRC = 1
 else
 	CSRC = 0
 endif
 
-OBJDIR = objs
-OBJS = $(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
-
 PROJTEXT = \033[1;34mlibft: \033[0;39m
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(INCLUDES)
+min: $(MINNAME)
+
+$(MINNAME): $(LIBCUSTOMNAME)
 	@ printf "\033[K$(PROJTEXT)Compiling\n"
 	@ printf "$(PROJTEXT)Linking\n"
-	@ ar rcs $(NAME) $?
-	@ printf "$(PROJTEXT)\033[1;32mLib built at $(NAME)\033[0;39m\n"
+	@ libtool $? -o $@
+	@ rm -f $?
+	@ printf "$(PROJTEXT)\033[1;32mMinimum Lib built at $@\033[0;39m\n"
+
+$(NAME): $(LIBCNAME) $(LIBCUSTOMNAME)
+	@ printf "\033[K$(PROJTEXT)Compiling\n"
+	@ printf "$(PROJTEXT)Linking\n"
+	@ libtool $? -o $@
+	@ rm -f $?
+	@ printf "$(PROJTEXT)\033[1;32mLib built at $@\033[0;39m\n"
+
+$(LIBCNAME): $(LIBCOBJS) $(INCLUDES)
+	@ printf "\033[K"
+	@ ar rcs $@ $(LIBCOBJS)
+
+$(LIBCUSTOMNAME): $(OBJS) $(INCLUDES)
+	@ printf "\033[K"
+	@ ar rcs $@ $(OBJS)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c $(INCLUDES)
 	@ if [ ! -d $(dir $@) ]; then mkdir -p $(dir $@); fi
@@ -223,13 +248,13 @@ endif
 	@ gcc $(CFLAGS) -I includes -c $< -o $@
 
 clean:
-	@ rm -f $(OBJS)
+	@ rm -rf $(OBJDIR)
 	@ printf "$(PROJTEXT)Removed objects\n"
 
 fclean: clean
-	@ rm -f $(NAME)
+	@ rm -f $(NAME) $(MINNAME) $(LIBCNAME) $(LIBCUSTOMNAME)
 	@ printf "$(PROJTEXT)Removed $(NAME)\n"
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re min

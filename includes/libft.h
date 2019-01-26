@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kelian <kelian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/13 03:36:14 by kdumarai         ###   ########.fr       */
+/*   Updated: 2019/01/26 21:28:55 by kelian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 
 # include "ft_int.h"
 
+# include "libc.h"
 # include "mem.h"
 # include "str.h"
 # include "wordtab.h"
-# include "char.h"
 # include "t_str.h"
 # include "t_tab.h"
 # include "nbr.h"

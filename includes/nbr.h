@@ -19,7 +19,6 @@ void	ft_nbrcpy(char *dst, long nb);
 void	ft_nbrcat(char *dst, long nb);
 size_t	ft_nbrlen_base(long long n, int base);
 size_t	ft_nbrlen(long long n);
-int		ft_atoi(const char *str);
 int		ft_secatoi(int *dest, const char *str);
 char	*ft_itoa(int n);
 char	*ft_lltoa(long long nl);
