@@ -6,7 +6,7 @@
 #    By: kelian <kelian@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2019/01/26 22:49:05 by kelian           ###   ########.fr        #
+#    Updated: 2019/04/27 14:46:38 by kelian           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,11 +97,12 @@ SRCFILES = misc/get_next_line.c \
 	btree/ft_btdel.c \
 	nbr/ft_nbrlen.c \
 	nbr/ft_nbrlen_base.c \
-	nbr/ft_itoa.c \
 	nbr/ft_nbrcpy.c \
 	nbr/ft_nbrcat.c \
-	nbr/ft_secatoi.c \
+	nbr/ft_untob.c \
+	nbr/ft_itoa.c \
 	nbr/ft_lltoa.c \
+	nbr/ft_secatoi.c \
 	print/ft_putchar.c \
 	print/ft_putchar_fd.c \
 	print/ft_putnchar.c \
@@ -116,6 +117,7 @@ SRCFILES = misc/get_next_line.c \
 	print/ft_putendlsec_fd.c \
 	print/ft_putlst.c \
 	print/ft_putlst_fd.c \
+	print/ft_uputnbr.c \
 	print/ft_putnbr.c \
 	print/ft_putnbr_fd.c \
 	print/ft_putnbrl.c \
@@ -225,7 +227,7 @@ $(MINNAME): $(LIBCUSTOMNAME)
 $(NAME): $(LIBCNAME) $(LIBCUSTOMNAME)
 	@ printf "\033[K$(PROJTEXT)Compiling\n"
 	@ printf "$(PROJTEXT)Linking\n"
-	@ libtool $? -o $@
+	@ libtool $(LIBCNAME) $(LIBCUSTOMNAME) -o $@
 	@ printf "$(PROJTEXT)\033[1;32mLib built at $@\033[0;39m\n"
 
 $(LIBCNAME): $(LIBCOBJS) $(INCLUDES)

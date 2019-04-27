@@ -38,6 +38,9 @@ void	ft_putstr_color_fd(char const *s, char const *ec, int fd);
 void	ft_putendl_color(char const *s, char const *ec);
 void	ft_putendl_color_fd(char const *s, char const *ec, int fd);
 
+void	ft_uputnbr_unsigned(unsigned long long n, t_uint8 base);
+void	ft_uputnbr(long long n, t_uint8 base);
+
 void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putnbrl(int n);
