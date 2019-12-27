@@ -6,7 +6,7 @@
 #    By: kelian <kelian@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2019/04/27 14:46:38 by kelian           ###   ########.fr        #
+#    Updated: 2019/12/27 04:59:18 by kelian           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -137,6 +137,7 @@ SRCFILES = misc/get_next_line.c \
 	print/ft_putubt.c \
 	misc/ft_readfd.c \
 	misc/ft_returnmsg.c \
+	misc/ft_fatal.c \
 	misc/ft_isatty.c \
 	misc/ft_switch.c \
 	misc/ft_args_opts.c \
