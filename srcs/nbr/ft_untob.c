@@ -6,7 +6,7 @@
 /*   By: kelian <kelian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/27 14:31:55 by kelian            #+#    #+#             */
-/*   Updated: 2019/04/27 14:55:10 by kelian           ###   ########.fr       */
+/*   Updated: 2019/12/29 14:33:02 by kelian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 #define HEX_CHARSET	"0123456789ABCDEF"
 
-t_uint8	ft_untob(char *dest, unsigned long long n, t_uint8 base)
+t_uint8	ft_untob(char *dst, unsigned long long n, t_uint8 base, const char *cs)
 {
-	short	idx;
-	t_uint8 ret;
-	t_uint8 tmp[sizeof(n) * 8 * 2];
+	short		idx;
+	t_uint8 	ret;
+	t_uint8 	tmp[sizeof(n) * 8 * 2];
+	const char	*ics;
 
+	ics = (cs) ? cs : HEX_CHARSET;
 	if (n == 0)
 	{
-		*dest = *HEX_CHARSET;
+		*dst = *ics;
 		return (1);
 	}
 	idx = 0;
@@ -33,7 +35,7 @@ t_uint8	ft_untob(char *dest, unsigned long long n, t_uint8 base)
 	}
 	ret = (t_uint8)idx;
 	while (--idx > -1)
-		*(dest++) = HEX_CHARSET[tmp[idx]];
+		*(dst++) = ics[tmp[idx]];
 	return (ret);
 }
 

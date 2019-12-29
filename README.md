@@ -7,13 +7,13 @@ Libft defines 2 linked list types:
 - `t_list` (Simply linked)
 - `t_dlist` (Doubly linked)
 
-Each of those types define a `void *content` and a `size_t content_size`
+Each of those types defines a `void *content` and a `size_t content_size`
 
 # Binary tree data type
 Libft defines `t_btree`. It contains a `void *data` and a `size_t data_size`
 
 # Vectors
-Libft defines 2 really cool vector types:
+Libft defines 2 vector types:
 
 - `t_str`
 - `t_tab`
@@ -40,8 +40,8 @@ Libft defines the following C99 types
 Libft defines 4 macros:
 
 - TRUE = 1
-- FALSE = 0
 - YES = 1
+- FALSE = 0
 - NO = 0
 
-It also defines a `t_bool` type which I never use
+It also defines a `t_bool` type that I never use (which is an enum)

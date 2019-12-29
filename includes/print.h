@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kelian <kelian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/28 18:12:34 by kdumarai         ###   ########.fr       */
+/*   Updated: 2019/12/29 15:18:15 by kelian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 # define PRINT_H
 
 # include "libft.h"
+
+# define FT_UPUTNBR_PADDING_MASK	0xff
+# define FT_UPUTNBR_ENDL			(1 << 8)
+# define FT_UPUTNBR_NOOPT			0
 
 void	ft_putchar(char c);
 void	ft_putnchar(char c, size_t n);
@@ -38,8 +42,9 @@ void	ft_putstr_color_fd(char const *s, char const *ec, int fd);
 void	ft_putendl_color(char const *s, char const *ec);
 void	ft_putendl_color_fd(char const *s, char const *ec, int fd);
 
-void	ft_uputnbr_unsigned(unsigned long long n, t_uint8 base);
-void	ft_uputnbr(long long n, t_uint8 base);
+void	ft_uputnbr_unsigned(unsigned long long n, t_uint8 base, \
+								const char *cs, t_uint16 opts);
+void	ft_uputnbr(long long n, t_uint8 base, const char *cs, t_uint16 opts);
 
 void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);

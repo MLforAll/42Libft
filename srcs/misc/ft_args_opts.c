@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_args_opts.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kelian <kelian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/09 22:23:23 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/27 00:02:13 by kdumarai         ###   ########.fr       */
+/*   Updated: 2019/12/28 19:22:53 by kelian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static void	do_overrides(char arg_char, int *ret,
 	}
 }
 
-static int	chk_arg(char *arg, int *ret,
+static int	chk_arg(const char *arg, int *ret,
 					const char *charset, const char *overrides)
 {
 	int				new;
@@ -77,7 +77,7 @@ static int	chk_arg(char *arg, int *ret,
 	return (0);
 }
 
-int			ft_args_opts(char **av, int *idx, const char *charset,
+int			ft_args_opts(const char **av, int *idx, const char *charset,
 						const char *overrides)
 {
 	int		ret;

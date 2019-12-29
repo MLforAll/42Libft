@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   misc.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kelian <kelian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/08/01 23:29:12 by kdumarai         ###   ########.fr       */
+/*   Updated: 2019/12/28 19:23:21 by kelian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int				ft_switch(const void *dataref,
 						size_t tablelen,
 						int (*cmp)(const void *, const void *));
 
-int				ft_args_opts(char **av, int *idx, const char *charset,
+int				ft_args_opts(const char **av, int *idx, const char *charset,
 							const char *overrides);
 
 #endif

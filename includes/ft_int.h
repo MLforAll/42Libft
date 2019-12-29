@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_int.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kelian <kelian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/28 23:09:03 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/09/20 03:57:23 by kdumarai         ###   ########.fr       */
+/*   Updated: 2019/12/29 14:58:12 by kelian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@
 
 typedef unsigned char		t_uint8;
 typedef char				t_int8;
+
+/*
+** 16-bit ones
+*/
+
+typedef unsigned short		t_uint16;
+typedef short				t_int16;
 
 /*
 ** 32-bit ones
