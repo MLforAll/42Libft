@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/07/31 22:36:20 by kdumarai         ###   ########.fr       */
+/*   Updated: 2019/12/30 17:31:06 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # define STRREPL_VS	1
 
 size_t			ft_strclen(const char *str, char c);
-
 
 char			*ft_strnew(size_t size);
 void			ft_strdel(char **as);
