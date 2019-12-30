@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_int.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kelian <kelian@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/28 23:09:03 by kdumarai          #+#    #+#             */
-/*   Updated: 2019/12/29 14:58:12 by kelian           ###   ########.fr       */
+/*   Updated: 2019/12/30 17:36:06 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,8 @@ typedef int					t_int32;
 ** 64-bit ones
 */
 
-#ifdef _WIN32
-
 typedef unsigned long long	t_uint64;
 typedef long long			t_int64;
-
-#else
-
-typedef unsigned long		t_uint64;
-typedef long				t_int64;
-
-#endif
 
 /*
 ** ptr
