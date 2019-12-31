@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kelian <kelian@student.42.fr>              +#+  +:+       +#+         #
+#    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2019/12/30 15:04:30 by kelian           ###   ########.fr        #
+#    Updated: 2019/12/31 03:02:18 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,6 +70,7 @@ LIBCSRCS = $(addprefix $(SRCDIR)/, $(LIBCSRCFILES))
 SRCFILES = misc/get_next_line.c \
 	mem/ft_memalloc.c \
 	mem/ft_memdel.c \
+	mem/ft_memswap.c \
 	list/ft_lstnew.c \
 	list/ft_lstnewom.c \
 	list/ft_lstnew_nomalloc.c \
@@ -141,7 +142,7 @@ SRCFILES = misc/get_next_line.c \
 	misc/ft_isatty.c \
 	misc/ft_switch.c \
 	misc/ft_args_opts.c \
-	misc/ft_swapstruct.c \
+	misc/ft_structcopy.c \
 	string/ft_strclr.c \
 	string/ft_strcmpi.c \
 	string/ft_strchrf.c \

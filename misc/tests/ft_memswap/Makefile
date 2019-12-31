@@ -10,16 +10,19 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = testswapstruct
-SRCS = swapstruct_test.c
+NAME = testmemswap
+SRCS = memswap_test.c
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): force
 	make -C ../../..
-	gcc -Wall -Wextra -Werror -o $(NAME) $(SRCS) -L../../.. -lft -I../../../includes
+	gcc -Wall -Weverything -Werror -o $(NAME) $(SRCS) -L../../.. -lft -I../../../includes
+
+force:
+	@ true
 
 fclean:
-	rm $(NAME)
+	rm -f $(NAME)
 
 re: fclean all

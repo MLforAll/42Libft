@@ -20,6 +20,6 @@ $(NAME):
 	gcc -Wall -Wextra -Werror -o $(NAME) $(SRCS) -I../../includes
 
 fclean:
-	rm $(NAME)
+	rm -f $(NAME)
 
 re: fclean all

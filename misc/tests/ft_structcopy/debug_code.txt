@@ -1,0 +1,7 @@
+(void)printf("src; %u - %u = %u\n", saln, (afill[AFIL_C] & ISRC_MSK), saln - (afill[AFIL_C] & ISRC_MSK));
+(void)printf("dst; %u - %u = %u\n", daln, ((afill[AFIL_C] & IDST_MSK) >> ISHIFT), daln - ((afill[AFIL_C] & IDST_MSK) >> ISHIFT));
+
+(void)printf("c: %c; %c\n", *sfmt, *dfmt);
+(void)printf("curr: %u; %u\n", afill[AFIL_C] & ISRC_MSK, (afill[AFIL_C] & IDST_MSK) >> ISHIFT);
+(void)printf("next: %u; %u\n", afill[AFIL_N] & ISRC_MSK, (afill[AFIL_N] & IDST_MSK) >> ISHIFT);
+(void)puts("");

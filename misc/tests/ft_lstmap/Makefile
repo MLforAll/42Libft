@@ -26,6 +26,6 @@ unittest:
 	gcc -Wall -Wextra -Werror -o $(NAME) lstmap_test2.c $(SRCS) -I../../includes
 
 fclean:
-	rm $(NAME)
+	rm -f $(NAME)
 
 re: fclean all

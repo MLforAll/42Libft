@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swapstruct.c                                    :+:      :+:    :+:   */
+/*   ft_memswap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kelian <kelian@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 14:47:01 by kelian            #+#    #+#             */
-/*   Updated: 2019/12/30 15:14:20 by kelian           ###   ########.fr       */
+/*   Updated: 2019/12/31 02:59:03 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libkern/OSByteOrder.h>
 #include "libft.h"
 
-void	ft_swapstruct(void *s, const char *fmt)
+void	ft_memswap(void *s, const char *fmt)
 {
-	while (*fmt)
+	while (TRUE)
 	{
 		if (*fmt == 'w')
 		{
@@ -34,6 +34,8 @@ void	ft_swapstruct(void *s, const char *fmt)
 		}
 		else
 			s += sizeof(char) * (ft_isdigit(*fmt) ? ft_atoi(fmt) : 1);
+		if (!(fmt = ft_strchr(fmt, ';')))
+			break ;
 		fmt++;
 	}
 }

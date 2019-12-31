@@ -6,19 +6,21 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 14:27:25 by kdumarai          #+#    #+#              #
-#    Updated: 2017/11/09 13:28:10 by kdumarai         ###   ########.fr        #
+#    Updated: 2019/12/31 03:06:19 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = testatoi
-SRCS = atoi_test.c \
-	   ../../srcs/fromc/ft_atoi.c \
-	   ../../srcs/fromc/ft_isdigit.c
+NAME = teststructcopy
+SRCS = structcopy_test.c
 
 all: $(NAME)
 
-$(NAME):
-	gcc -Wall -Wextra -Werror -o $(NAME) $(SRCS) -I../../includes -D__NOARGS__
+$(NAME): force
+	make -C ../../..
+	gcc -Wall -Wextra -Werror -o $(NAME) $(SRCS) -L../../.. -lft -I../../../includes
+
+force:
+	@ true
 
 fclean:
 	rm -f $(NAME)
