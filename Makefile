@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2019/12/31 03:02:18 by kdumarai         ###   ########.fr        #
+#    Updated: 2019/12/31 14:46:03 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,6 +70,8 @@ LIBCSRCS = $(addprefix $(SRCDIR)/, $(LIBCSRCFILES))
 SRCFILES = misc/get_next_line.c \
 	mem/ft_memalloc.c \
 	mem/ft_memdel.c \
+	mem/ft_memintcpy.c \
+	mem/ft_memcpyf.c \
 	mem/ft_memswap.c \
 	list/ft_lstnew.c \
 	list/ft_lstnewom.c \
