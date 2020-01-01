@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kelian <kelian@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2019/01/26 21:28:55 by kelian           ###   ########.fr       */
+/*   Updated: 2020/01/01 18:42:46 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,13 @@
 # define NO					0
 # define TRUE				1
 # define FALSE				0
+
+/*
+** Charsets
+*/
+
+# define HEX_CHARSET_UP		"0123456789ABCDEF"
+# define HEX_CHARSET_LC		"0123456789abcdef"
 
 /*
 ** size struct (width/height)

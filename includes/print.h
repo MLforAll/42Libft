@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2019/12/30 17:33:42 by kdumarai         ###   ########.fr       */
+/*   Updated: 2020/01/01 18:42:12 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,7 @@ void	ft_putlst(t_list *lst);
 void	ft_putlst_fd(t_list *lst, int fd);
 
 void	ft_putubt(t_btree *bt, void (*ft_putelem)(void*, size_t));
+
+void	ft_hexdump(void *ptr, size_t sz, const char *cs, t_uint8 nblock);
 
 #endif

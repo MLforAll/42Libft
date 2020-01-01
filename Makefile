@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2019/12/31 14:46:03 by kdumarai         ###   ########.fr        #
+#    Updated: 2020/01/01 18:43:32 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -138,6 +138,7 @@ SRCFILES = misc/get_next_line.c \
 	print/ft_putnbr_ll.c \
 	print/ft_putnbr_ll_fd.c \
 	print/ft_putubt.c \
+	print/ft_hexdump.c \
 	misc/ft_readfd.c \
 	misc/ft_returnmsg.c \
 	misc/ft_fatal.c \
