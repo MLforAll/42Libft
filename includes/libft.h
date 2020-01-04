@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:58:20 by kdumarai          #+#    #+#             */
-/*   Updated: 2020/01/01 18:42:46 by kdumarai         ###   ########.fr       */
+/*   Updated: 2020/01/04 18:18:30 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,5 +108,15 @@ typedef enum		e_bool
 	kTrue,
 	kFalse
 }					t_bool;
+
+/*
+** generic pointer
+*/
+
+typedef union		u_genptr
+{
+	void		*ptr;
+	t_uintptr	addr;
+}					t_genptr;
 
 #endif
