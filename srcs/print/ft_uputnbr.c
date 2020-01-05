@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/27 13:07:08 by kelian            #+#    #+#             */
-/*   Updated: 2020/01/02 20:28:44 by kdumarai         ###   ########.fr       */
+/*   Updated: 2020/01/05 23:14:54 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ inline static void	ft_uputnbr_opts(char *buff, t_uint8 blen, t_uint16 opts)
 {
 	t_uint8	swift;
 	t_uint8	cnt;
+	t_uint8	pad;
 
 	cnt = blen;
 	if (opts & FT_UPUTNBR_ENDL)
@@ -23,6 +24,8 @@ inline static void	ft_uputnbr_opts(char *buff, t_uint8 blen, t_uint16 opts)
 		buff[blen] = '\n';
 		buff[++blen] = '\0';
 	}
+	if (!(pad = opts & FT_UPUTNBR_PADDING_MASK))
+		return ;
 	swift = 0;
 	while (cnt++ % (opts & FT_UPUTNBR_PADDING_MASK))
 		swift++;
@@ -44,7 +47,8 @@ void				ft_uputnbr_unsigned(unsigned long long n, t_uint8 base, \
 
 	ft_bzero(buff, sizeof(buff));
 	blen = ft_untob(buff, n, base, cs);
-	ft_uputnbr_opts(buff, blen, opts);
+	if (opts != 0)
+		ft_uputnbr_opts(buff, blen, opts);
 	ft_putstr(buff);
 }
 
@@ -69,6 +73,7 @@ void				ft_uputnbr(long long n, t_uint8 base, const char *cs, \
 	else
 		ptr = buff;
 	blen = ft_untob(ptr, (unsigned long long)n, base, cs);
-	ft_uputnbr_opts(ptr, blen, opts);
+	if (opts != 0)
+		ft_uputnbr_opts(ptr, blen, opts);
 	ft_putstr(buff);
 }
