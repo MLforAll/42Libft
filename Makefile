@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2020/01/01 18:43:32 by kdumarai         ###   ########.fr        #
+#    Updated: 2020/01/06 19:38:14 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -217,7 +217,7 @@ else
 	CSRC = 0
 endif
 
-PROJTEXT = \033[1;34mlibft: \033[0;39m
+PROJTEXT = \033[1;34m$(basename $(NAME)): \033[0;39m
 
 all: $(NAME)
 
