@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2020/01/06 19:38:14 by kdumarai         ###   ########.fr        #
+#    Updated: 2020/01/10 19:07:43 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,6 +70,7 @@ LIBCSRCS = $(addprefix $(SRCDIR)/, $(LIBCSRCFILES))
 SRCFILES = misc/get_next_line.c \
 	mem/ft_memalloc.c \
 	mem/ft_memdel.c \
+	mem/ft_memrev.c \
 	mem/ft_memintcpy.c \
 	mem/ft_memcpyf.c \
 	mem/ft_memswap.c \
@@ -106,37 +107,37 @@ SRCFILES = misc/get_next_line.c \
 	nbr/ft_itoa.c \
 	nbr/ft_lltoa.c \
 	nbr/ft_secatoi.c \
-	print/ft_putchar.c \
-	print/ft_putchar_fd.c \
-	print/ft_putnchar.c \
-	print/ft_putnchar_fd.c \
-	print/ft_putendl.c \
-	print/ft_putendl_color.c \
-	print/ft_putendl_color_fd.c \
-	print/ft_putendlmax.c \
-	print/ft_putendlmax_fd.c \
-	print/ft_putendl_fd.c \
-	print/ft_putendlsec.c \
-	print/ft_putendlsec_fd.c \
+	print/strprint/ft_putchar.c \
+	print/strprint/ft_putchar_fd.c \
+	print/strprint/ft_putnchar.c \
+	print/strprint/ft_putnchar_fd.c \
+	print/strprint/ft_putendl.c \
+	print/strprint/ft_putendlmax.c \
+	print/strprint/ft_putendlmax_fd.c \
+	print/strprint/ft_putendl_fd.c \
+	print/strprint/ft_putendlsec.c \
+	print/strprint/ft_putendlsec_fd.c \
+	print/strprint/ft_putstr.c \
+	print/strprint/ft_putstrmax.c \
+	print/strprint/ft_putstrmax_fd.c \
+	print/strprint/ft_putstrsec.c \
+	print/strprint/ft_putstrsec_fd.c \
+	print/strprint/ft_putstr_fd.c \
 	print/ft_putlst.c \
 	print/ft_putlst_fd.c \
 	print/ft_uputnbr.c \
-	print/ft_putnbr.c \
-	print/ft_putnbr_fd.c \
-	print/ft_putnbrl.c \
-	print/ft_putnbrl_fd.c \
-	print/ft_putstr.c \
-	print/ft_putstrmax.c \
-	print/ft_putstrmax_fd.c \
-	print/ft_putstrsec.c \
-	print/ft_putstrsec_fd.c \
-	print/ft_putstr_color.c \
-	print/ft_putstr_color_fd.c \
-	print/ft_putstr_fd.c \
+	print/deprecated/ft_putnbr.c \
+	print/deprecated/ft_putnbr_fd.c \
+	print/deprecated/ft_putnbrl.c \
+	print/deprecated/ft_putnbrl_fd.c \
+	print/deprecated/ft_putnbr_ll.c \
+	print/deprecated/ft_putnbr_ll_fd.c \
+	print/color/ft_putendl_color.c \
+	print/color/ft_putendl_color_fd.c \
+	print/color/ft_putstr_color.c \
+	print/color/ft_putstr_color_fd.c \
 	print/ft_puttab.c \
 	print/ft_puttab_fd.c \
-	print/ft_putnbr_ll.c \
-	print/ft_putnbr_ll_fd.c \
 	print/ft_putubt.c \
 	print/ft_hexdump.c \
 	misc/ft_readfd.c \
@@ -172,6 +173,7 @@ SRCFILES = misc/get_next_line.c \
 	string/ft_strsub.c \
 	string/ft_strtrim.c \
 	string/get_last_component.c \
+	string/ft_strrev.c \
 	wordtab/ft_tabnew.c \
 	wordtab/ft_tabfree.c \
 	wordtab/ft_tabjoin.c \

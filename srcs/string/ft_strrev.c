@@ -1,34 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_untob.c                                         :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/27 14:31:55 by kelian            #+#    #+#             */
-/*   Updated: 2020/01/10 18:56:31 by kdumarai         ###   ########.fr       */
+/*   Created: 2020/01/10 18:57:43 by kdumarai          #+#    #+#             */
+/*   Updated: 2020/01/10 18:58:43 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_uint8	ft_untob(char *dst, unsigned long long n, t_uint8 base, const char *cs)
+char	*ft_strrev(char *s)
 {
-	t_uint8		idx;
-
-	if (!cs)
-		cs = HEX_CHARSET_UP;
-	if (n == 0)
-	{
-		*dst = *cs;
-		return (1);
-	}
-	idx = 0;
-	while (n > 0)
-	{
-		dst[idx++] = cs[n % base];
-		n /= base;
-	}
-	(void)ft_memrev((void *)dst, idx);
-	return ((t_uint8)idx);
+	if (!s)
+		return (s);
+	return ((char *)ft_memrev((void *)s, ft_strlen(s)));
 }

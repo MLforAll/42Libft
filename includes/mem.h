@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2019/12/31 14:45:31 by kdumarai         ###   ########.fr       */
+/*   Updated: 2020/01/10 18:57:09 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
+
+void 	*ft_memrev(void *p, size_t sz);
 
 /*
 ** See "misc.h" for format

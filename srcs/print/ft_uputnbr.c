@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/27 13:07:08 by kelian            #+#    #+#             */
-/*   Updated: 2020/01/05 23:14:54 by kdumarai         ###   ########.fr       */
+/*   Updated: 2020/01/10 18:41:49 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,10 @@ inline static void	ft_uputnbr_opts(char *buff, t_uint8 blen, t_uint16 opts)
 	if (!(pad = opts & FT_UPUTNBR_PADDING_MASK))
 		return ;
 	swift = 0;
-	while (cnt++ % (opts & FT_UPUTNBR_PADDING_MASK))
+	while (cnt++ % pad)
 		swift++;
+	if (swift == 0)
+		return ;
 	(void)ft_memmove((void *)((t_uintptr)buff + swift--), buff, blen);
 	while (TRUE)
 	{
