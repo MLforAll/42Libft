@@ -6,29 +6,23 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/27 14:31:55 by kelian            #+#    #+#             */
-/*   Updated: 2020/01/10 18:56:31 by kdumarai         ###   ########.fr       */
+/*   Updated: 2020/01/11 20:09:36 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_uint8	ft_untob(char *dst, unsigned long long n, t_uint8 base, const char *cs)
+t_uint8	ft_untob(char *dst, long long n, t_uint8 base, const char *cs)
 {
-	t_uint8		idx;
+	char	*ptr;
 
-	if (!cs)
-		cs = HEX_CHARSET_UP;
-	if (n == 0)
+	if (base == 10 && n < 0)
 	{
-		*dst = *cs;
-		return (1);
+		n = -n;
+		*dst = '-';
+		ptr = dst + 1;
 	}
-	idx = 0;
-	while (n > 0)
-	{
-		dst[idx++] = cs[n % base];
-		n /= base;
-	}
-	(void)ft_memrev((void *)dst, idx);
-	return ((t_uint8)idx);
+	else
+		ptr = dst;
+	return (ft_untob_unsigned(ptr, (unsigned long long)n, base, cs));
 }
