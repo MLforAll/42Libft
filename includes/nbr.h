@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2020/01/11 19:46:05 by kdumarai         ###   ########.fr       */
+/*   Updated: 2020/01/13 17:57:54 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define NBR_H
 
 # include <string.h>
+
+int		ft_atoi_length(const char *str, ssize_t sz);
+int		ft_atoi_endptr(const char *beginptr, const char *endptr);
 
 void	ft_nbrcpy(char *dst, long nb);
 void	ft_nbrcat(char *dst, long nb);

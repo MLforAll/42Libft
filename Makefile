@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2020/01/11 20:10:04 by kdumarai         ###   ########.fr        #
+#    Updated: 2020/01/13 18:05:59 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -99,6 +99,8 @@ SRCFILES = misc/get_next_line.c \
 	btree/ft_btattach.c \
 	btree/ft_btdelone.c \
 	btree/ft_btdel.c \
+	nbr/ft_atoi_length.c \
+	nbr/ft_atoi_endptr.c \
 	nbr/ft_nbrlen.c \
 	nbr/ft_nbrlen_base.c \
 	nbr/ft_nbrcpy.c \
@@ -264,7 +266,7 @@ clean:
 
 fclean: clean
 	@ rm -f $(NAME) $(MINNAME) $(LIBCNAME) $(LIBCUSTOMNAME)
-	@ printf "$(PROJTEXT)Removed $(NAME)\n"
+	@ printf "$(PROJTEXT)Removed $(NAME), $(MINNAME), $(LIBCNAME) and $(LIBCUSTOMNAME)\n"
 
 re: fclean all
 

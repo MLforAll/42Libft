@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoi_endptr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 16:29:26 by kdumarai          #+#    #+#             */
-/*   Updated: 2020/01/13 18:57:58 by kdumarai         ###   ########.fr       */
+/*   Created: 2020/01/13 18:05:31 by kdumarai          #+#    #+#             */
+/*   Updated: 2020/01/13 18:05:42 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-inline int			ft_atoi(const char *str)
+inline int		ft_atoi_endptr(const char *beginptr, const char *endptr)
 {
-	return (ft_atoi_length(str, -1));
+	ssize_t	sz;
+
+	if (endptr)
+	{
+		if (beginptr > endptr)
+			return (0);
+		sz = endptr - beginptr;
+	}
+	else
+		sz = -1;
+	return (ft_atoi_length(beginptr, sz));
 }
