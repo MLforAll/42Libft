@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2020/01/01 18:42:12 by kdumarai         ###   ########.fr       */
+/*   Updated: 2020/01/15 20:52:42 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,13 @@ void	ft_putendlsec_fd(char const *s, int fd);
 
 size_t	ft_putstrmax(const char *s, size_t len);
 size_t	ft_putstrmax_fd(const char *s, size_t len, int fd);
+size_t	ft_putstrendptr(const char *s, const char *endptr);
+size_t	ft_putstrendptr_fd(const char *s, const char *endptr, int fd);
+
 size_t	ft_putendlmax(const char *s, size_t len);
 size_t	ft_putendlmax_fd(const char *s, size_t len, int fd);
+size_t	ft_putendlendptr(const char *s, const char *endptr);
+size_t	ft_putendlendptr_fd(const char *s, const char *endptr, int fd);
 
 void	ft_putstr_color(char const *s, char const *ec);
 void	ft_putstr_color_fd(char const *s, char const *ec, int fd);

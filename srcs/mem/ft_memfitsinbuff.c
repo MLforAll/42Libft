@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memrev.c                                        :+:      :+:    :+:   */
+/*   ft_memfitsinbuff.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/10 18:56:11 by kdumarai          #+#    #+#             */
-/*   Updated: 2020/01/15 21:25:02 by kdumarai         ###   ########.fr       */
+/*   Created: 2020/01/15 22:08:14 by kdumarai          #+#    #+#             */
+/*   Updated: 2020/01/15 22:11:57 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memrev(void *p, size_t sz)
+inline t_uint8	ft_memfitsinbuff(const void *stptr, \
+								const void *b, \
+								size_t sz, \
+								const void *endptr)
 {
-	size_t			idx;
-	unsigned char	byte;
-	unsigned char	*pc;
-
-	if (!p || sz < 2)
-		return (p);
-	sz--;
-	idx = 0;
-	pc = (unsigned char *)p;
-	while (idx < sz - idx)
-	{
-		byte = pc[idx];
-		pc[idx] = pc[sz - idx];
-		pc[sz - idx] = byte;
-		idx++;
-	}
-	return (p);
+	if ((stptr && b < stptr) || (const void *)((t_uintptr)b + sz) > endptr)
+		return (NO);
+	return (YES);
 }

@@ -6,21 +6,28 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 18:36:45 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/06/28 18:18:38 by kdumarai         ###   ########.fr       */
+/*   Updated: 2020/01/15 20:49:36 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-size_t	ft_putstrmax_fd(const char *s, size_t len, int fd)
+size_t			ft_putstrmax_fd(const char *s, size_t max, int fd)
 {
-	size_t	lentp;
+	size_t	len;
 
-	lentp = ft_strlen(s);
-	if (len < lentp)
-		lentp = len;
-	if (write(fd, s, lentp) > 0)
-		return (lentp);
+	len = 0;
+	while (s[len] && len < max)
+		len++;
+	if (write(fd, s, len) > 0)
+		return (len);
 	return (0);
+}
+
+inline size_t	ft_putstrendptr_fd(const char *s, const char *endptr, int fd)
+{
+	if (s > endptr)
+		return (0);
+	return (ft_putstrmax_fd(s, endptr - s, fd));
 }

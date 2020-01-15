@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2020/01/13 18:05:59 by kdumarai         ###   ########.fr        #
+#    Updated: 2020/01/15 22:12:34 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,6 +71,8 @@ SRCFILES = misc/get_next_line.c \
 	mem/ft_memalloc.c \
 	mem/ft_memdel.c \
 	mem/ft_memrev.c \
+	mem/ft_memfitsinbuff.c \
+	mem/ft_memfmtsz.c \
 	mem/ft_memintcpy.c \
 	mem/ft_memcpyf.c \
 	mem/ft_memswap.c \
