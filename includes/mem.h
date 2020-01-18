@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mem.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kelian <kelian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2020/01/15 22:12:43 by kdumarai         ###   ########.fr       */
+/*   Updated: 2020/01/18 00:41:39 by kelian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
+void	*ft_memdup(void *src, size_t sz);
 
 void	*ft_memrev(void *p, size_t sz);
 

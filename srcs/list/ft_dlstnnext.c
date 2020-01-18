@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ttabdel.c                                       :+:      :+:    :+:   */
+/*   ft_dlstnnext.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/19 02:12:14 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/08/16 06:32:33 by kdumarai         ###   ########.fr       */
+/*   Created: 2018/08/15 18:21:30 by kdumarai          #+#    #+#             */
+/*   Updated: 2018/08/15 18:26:21 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-void	ft_ttabdel(t_tab *mtab, void (*delf)(void *, size_t))
+t_dlist		*ft_dlstnnext(t_dlist *alst, long len)
 {
-	unsigned long	idx;
-
-	if (delf)
+	if (!alst)
+		return (NULL);
+	while (alst && len != 0)
 	{
-		idx = mtab->count;
-		while (idx--)
-			delf((void*)((t_uintptr)mtab->data + idx * mtab->data_size),
-				mtab->data_size);
+		if (len > 0)
+		{
+			alst = alst->next;
+			len--;
+		}
+		else if (len < 0)
+		{
+			alst = alst->prev;
+			len++;
+		}
 	}
-	free(mtab->data);
-	ft_bzero(mtab, sizeof(t_tab));
+	return (alst);
 }

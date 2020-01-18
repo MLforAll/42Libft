@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ttabdel.c                                       :+:      :+:    :+:   */
+/*   ft_memdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kelian <kelian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/19 02:12:14 by kdumarai          #+#    #+#             */
-/*   Updated: 2018/08/16 06:32:33 by kdumarai         ###   ########.fr       */
+/*   Created: 2020/01/18 00:39:26 by kelian            #+#    #+#             */
+/*   Updated: 2020/01/18 00:42:21 by kelian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-void	ft_ttabdel(t_tab *mtab, void (*delf)(void *, size_t))
+inline void	*ft_memdup(void *src, size_t sz)
 {
-	unsigned long	idx;
+	void	*ret;
 
-	if (delf)
-	{
-		idx = mtab->count;
-		while (idx--)
-			delf((void*)((t_uintptr)mtab->data + idx * mtab->data_size),
-				mtab->data_size);
-	}
-	free(mtab->data);
-	ft_bzero(mtab, sizeof(t_tab));
+	if (!(ret = malloc(sz)))
+		return (NULL);
+	return (ft_memcpy(ret, src, sz));
 }
