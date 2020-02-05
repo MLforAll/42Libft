@@ -6,7 +6,7 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2020/01/02 20:28:46 by kdumarai         ###   ########.fr       */
+/*   Updated: 2020/02/05 21:22:21 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,7 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *big, const char *find);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+char	*ft_getenv(const char *name);
 
 #endif
