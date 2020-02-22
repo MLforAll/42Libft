@@ -66,7 +66,8 @@ LIBCSRCFILES = libc/ft_strnstr.c \
 	libc/ft_islower.c \
 	libc/ft_isprint.c \
 	libc/ft_isupper.c \
-	libc/ft_getenv.c
+	libc/ft_getenv.c \
+	libc/ft_getopt.c
 LIBCSRCS = $(addprefix $(SRCDIR)/, $(LIBCSRCFILES))
 SRCFILES = misc/get_next_line.c \
 	mem/ft_memalloc.c \

@@ -6,12 +6,25 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2020/02/05 21:22:21 by kdumarai         ###   ########.fr       */
+/*   Updated: 2020/02/22 18:08:39 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBC_H
 # define LIBC_H
+
+# define GETOPT_ERR_NOMORE	-1
+# define GETOPT_ERR_ILL		-2
+# define GETOPT_ERR_REQ		-3
+
+extern const char	*g_optarg;
+extern int			g_optind;
+extern int			g_optopt;
+extern int			g_opterr;
+extern int			g_optreset;
+
+int		ft_getopt(int ac, const char **av, const char *optstring);
+void	ft_getopt_error(const char **av, int opt, int type);
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
