@@ -6,7 +6,7 @@
 #    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2020/02/05 21:23:07 by kdumarai         ###   ########.fr        #
+#    Updated: 2020/02/29 17:57:46 by kdumarai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,7 @@ LIBCSRCFILES = libc/ft_strnstr.c \
 	libc/ft_isprint.c \
 	libc/ft_isupper.c \
 	libc/ft_getenv.c \
+	libc/ft_tcgetattr.c \
 	libc/ft_getopt.c
 LIBCSRCS = $(addprefix $(SRCDIR)/, $(LIBCSRCFILES))
 SRCFILES = misc/get_next_line.c \

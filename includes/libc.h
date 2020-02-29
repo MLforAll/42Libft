@@ -6,12 +6,15 @@
 /*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2020/02/22 18:08:39 by kdumarai         ###   ########.fr       */
+/*   Updated: 2020/02/29 17:58:32 by kdumarai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBC_H
 # define LIBC_H
+
+# include <string.h>
+# include <termios.h>
 
 # define GETOPT_ERR_NOMORE	-1
 # define GETOPT_ERR_ILL		-2
@@ -60,5 +63,6 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 char	*ft_getenv(const char *name);
+int		ft_tcgetattr(int fd, struct termios *t);
 
 #endif
