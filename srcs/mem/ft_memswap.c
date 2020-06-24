@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memswap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kelian <kelian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 14:47:01 by kelian            #+#    #+#             */
-/*   Updated: 2019/12/31 02:59:03 by kdumarai         ###   ########.fr       */
+/*   Updated: 2020/06/24 20:04:27 by kelian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libkern/OSByteOrder.h>
 #include "libft.h"
+
+#ifdef __APPLE__
+
+#include <libkern/OSByteOrder.h>
 
 void	ft_memswap(void *s, const char *fmt)
 {
@@ -39,3 +42,17 @@ void	ft_memswap(void *s, const char *fmt)
 		fmt++;
 	}
 }
+
+#else
+
+#include <stdlib.h>
+
+void	ft_memswap(void *s, const char *fmt)
+{
+	(void)s;
+	(void)fmt;
+	ft_putendl_fd("UNSUPPORTED", 2);
+	abort();
+}
+
+#endif

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+         #
+#    By: kelian <kelian@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/04 06:10:18 by kdumarai          #+#    #+#              #
-#    Updated: 2020/02/29 17:57:46 by kdumarai         ###   ########.fr        #
+#    Updated: 2020/06/24 20:12:52 by kelian           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -260,7 +260,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c $(INCLUDES)
 	@ printf "\033[K$(PROJTEXT)Compiling \033[1;33m$<"
 ifneq ($(CSRC),0)
 	@ printf " %.0s" {1..$(shell expr 40 - $(shell printf "$<" | wc -m))}
-	@ export LC_ALL=C; printf "\033[1;34m[%3.0f%%]" "$(shell bc <<< "scale=1; $(CSRC) / $(NSRC) * 100")"
+	@ export LC_ALL=C; printf "\033[1;34m[%3.0f%%]" "$(shell echo "scale=1; $(CSRC) / $(NSRC) * 100" | bc)"
 	@ $(eval CSRC = $(shell expr $(CSRC) + 1))
 endif
 	@ printf "\033[0;39m\r"
