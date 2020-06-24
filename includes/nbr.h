@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   nbr.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdumarai <kdumarai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kelian <kelian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 22:36:06 by kdumarai          #+#    #+#             */
-/*   Updated: 2020/01/13 17:57:54 by kdumarai         ###   ########.fr       */
+/*   Updated: 2020/06/24 20:14:25 by kelian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef NBR_H
 # define NBR_H
 
+# include <unistd.h>
 # include <string.h>
 
 int		ft_atoi_length(const char *str, ssize_t sz);
